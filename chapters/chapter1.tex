@@ -1,0 +1,79 @@
+\chapter{Introduction\label{cha:chapter1}}
+\epigraph{"You all know that chatbots are a new technology altogether. It’s like the early age of the Web. Things are still shaky yet growing at the speed of light."}{Rashid Khan (Build Better Chatbots)}
+\\~\\
+As it is clear that {\textit{"chatbots are a new technology altogether"}} which depicts that future belongs to the chatbots. So to cope up with the speed of advancement, it is the need of the time to make chatbots intelligent enough to communicate like humans. However, many state of the art chatbots are developed but still they have a room for improvement. And for this purpose, lot of research is happening around the globe.
+\\~\\
+Mostly, already established chatbots can deliver for what they are designed and perform tasks for humans. Chatbots like Google Assistant, Apple's Siri and Amazon's Alexa are among the most developing virtual assistants and becoming the need of every day life. Whereas, IBM's Watson Assistant provides a cloud service for developers to include the service in their softwares and design the chatbots according to their choice and needs. In addition to it, there are several existing developed open source frameworks used widely for this purpose. RASA framework is one of these open source structures to provide an ease in performing machine learning stuff and natural language understanding(NLU). Such frameworks play important role for developing intelligent chatbots in the present era. 
+\\~\\
+Prime purpose of this masters thesis is to develop a framework with a different approach i.e. modular approach as mentioned in the Chapter 3 of this document. Which will assist developers to design their own conversational interfaces by using this framework. As an example the chatbot named as Frankenbot has been developed using this modular framework under the scope of this masters thesis requirements.
+\\~\\
+The fundamental goal of this masters thesis is to introduce a framework and make a contribution in the currently rising field of the chatbots. Newly inaugurated framework has been developed using Python and implements a web Api to make a request to the server from user interface which in return receives a json response with desired information to be displayed for a user. Web Api has been developed using Python's library known as Flask. A chatbot implemented using this framework is named as Frankenbot for demonstrating the main features of a framework. 
+\\~\\
+Frankenbot itself is a detective chatbot that communicates with users and on the basis of their respective answers makes a judgement whether a user is a culprit of a robbery or not.
+
+\section{Motivation}
+The concept of conversational agents knows as chatbots have been there for decades but the revolutionary year for it was 2016 \cite{ChatbotsChangingUserNeedsMotivations}.  Human-like conversational systems are one of  the  emerging  hot  topics  now  a  days.   Retrospectives  and  advancements  in  artificial intelligence (AI) and drastic transformation of mindset i.e.  humans communicating with some automated agent without being recognized are the main reasons for enhancement of interest towards chatbots.  It is very important to make sure that chatbots are intelligent enough to understand user utterances and the semantics in order to communicate as humans do.  The other important fact that can’t be deprecated is unlike living beings, machines don’t need refreshment and can perform 24/7.
+\\~\\
+The word chatbot is derived from “chat robot”. It  clearly  states  that  it  is  an  automated agent dealing with natural language user interfaces for data and services provided via dictation or writing. Users can query, command or conversate with the chatbots using regular language in order to get the required content in form of data or service.  As one messaging platform provider Kik, claims on its developer site:  “First there were websites, then there were apps.  Now there are bots.” \cite{ChatbotsChangingUserNeedsMotivations}. And no one can deny the fact that future belongs to the bots as you can easily notice that many companies are cutting out the man force in their customer support sector and replacing it with "Chatbots". With more advancement in these conversational agents, they can be utilized for many other departments at a corporate level.
+\\~\\
+Existing state of the art dialogue frameworks like RASA \cite{rasa}, PLATO \cite{plato} and IBM Watson \cite{ibmwatson} manage dialogues modelled as a single dialogue tree and contains only single state for all modules where module can be an utterance, response pair or a dialogue tree. It has several disadvantages like complex tree structure, complex and lengthy transitions between nodes, difficult to keep track of a dialogue, dependency on the last user utterance to stay in topic and difficulty in switching and jumping to and fro between different topics. To overcome these issues there is a need of an invention that has been proposed by means of this masters thesis as explained below.
+
+\section{Scope of the Thesis}
+The goal of this master thesis is the development of a framework to rapidly develop conversational interfaces / chatbots.
+\\~\\
+To overthrow the problems with already existing frameworks mentioned lastly, the framework is needed that implements a novel type of dialogue manager, the “modular dialogue manager”. In this approach dialogues are not modelled as a single dialogue tree but as multiple modules. A module can be a single utterance / response pair or a dialogue tree. The dialogue can have one state in each module instead of only a single state in all modules. This exposes several benefits: Transitions between the dialogue states do not need to be modelled explicitly. Therefore dialogue trees can be simpler. Furthermore, the chatbot can develop a sense for “staying in topic” instead of choosing the topic simply based on the last user utterance.
+
+\subsection{Challenges}
+This section highlights the major challenges in order to design a chatbot with modular dialogue manager. 
+\begin{itemize}
+  \item Recognition of keyword based entity and intent. Designing a tree structure for groups of intents, entities and assign parent and child node relation among them.
+   \item Combining multiple trees based on user utterances to make sure that chatbot can stay in topic without changing its state to some new topic.
+   \item Implementing a dialogue manager that favors recent modules. It means once the module is triggered, dialogue manager can save it as an active module. There are more chances of the next user utterance to belong to this active module which results in enhancing the performance.
+   \item The modules should be able to create dialogue trees. Every node of
+   the dialogue tree contains an answer followed by the JSON based file structure for storage.
+   \item Implementing the web based frontend with a support of multiple user sessions at the same time, relies on a web API with a single endpoint which receives the user utterance as a parameter and returns the chatbot answer.
+   \item Handling of Natural language processing by picking up the syntax. For example, If we query a chatbot "what's the weather?". It will respond perfectly fine but what if we rephrase it and ask "Could you please check the weather?" there is a chance of a glitch. These kind of programming problems resides under natural language processing category and are centre of attraction for the companies like Facebook, Google with Deep Text and Syntax Net respectively. \cite{ProgrammingchallengesofChatbot}
+   \item When it comes to Machine Learning, it is another fact that can not be declined while designing and developing a chatbot. Efficient programming practices with artificial intelligence(AI) concepts is a key to achieve the best learning for a system in order to respond correctly.
+   \cite{ProgrammingchallengesofChatbot}
+   \item Choosing a pipeline for RASA's natural language understanding(NLU) in order to extract the best out of it.
+\end{itemize}
+
+\subsection{Contributions}
+This document contains a review of the literature about dialogue managers in chatbots. Moreover, it also explains a software architecture and its implementation in addition to the necessary configuration files and the dialogue JSON file.
+\\~\\
+The following functionalities have been successfully implemented during the thesis:
+\begin{itemize}
+  \item Natural language understanding(NLU) for user utterance performed using RASA to detect intent and entities based on data for what it has been trained.
+   \item Dialogue trees; The modules are able to create dialogue trees. Every node of the dialogue tree contains an answer.
+   \item JSON based file structure to store the dialogues.
+   \item The modular dialogue manager. Its detailed functionality and working has been discussed ahead in Chapter 3.
+   \item The NLU based intent recognition has been implemented. It is responsible to generate a response for a user utterance based upon the matched intent.
+   \item The chatbot contains a NLU based entity recognition. All detected entities are written to the whiteboard. If there is an entity key appears in a bot response then firstly it gets updated with its value stored on whiteboard.
+   \item Frontend: A prototypical web based frontend has been developed as an interface for a user. The web based frontend relies on a  web API with a single endpoint which receives the user utterance as a parameter and returns the chatbot answer.
+   \item Multiple users can chat at the same time via the web based frontend. Their dialogue states / whiteboards and other session based variables will not mix with each other.
+   \item The system generates a log file that helps to analyse why the dialogue manager comes to a certain answer for a user utterance and what information and results have been provided by RASA's natural language understanding(NLU).
+   \item Directory name containing JSON files for bot's structure , training data and configuration information for RASA's NLU should be provided as a command line parameter.
+   \item To demonstrate the functionality of the framework a chatbot is implemented using the framework i.e. detective bot named as Frankenbot.
+\end{itemize}
+
+\subsubsection*{Technical Requirements}
+Framework has developed using Python language. It is implemented using test driven development. Framework includes all the above mentioned functionalities and is usable, means it is running without any bug or error. Lastly, it has no dependencies on libraries with problematic licences. Only the libraries lies under open source licence have been utilized during the implementation of a framework.
+
+\section{Background Knowledge}
+This section highlights briefly the background knowledge about the chatbots.
+\\~\\
+Conceptually, there are multiple components that combine to build a chatbot. Whenever there comes any message from the user, it directly passes to language identification module. It varies from simple tag retrieval to more elaborate statistical methods like n-gram models \cite{ngram} . The new message along with the language and potential previous conversation messages retrieved from database, are then pushed to the intent classifier module which identifies the user's conveyed intent. Eventually, a fitting action or a series of actions is produced using the message’s metadata, identified intent and other related information from database. Lastly, the action or a sequence is passed to the action handler module as an input and after its execution it generates an appropriate response. \cite{designandimplementation} 
+\\~\\
+When it comes to Natural Language Processing, Word Embedding and Recurrent Neural Networks are commonly used techniques for deep learning. For Language Identification, it is assumed that utterances can only be written in one language. Furthermore, Intent classification can be done using variety of techniques that vary from Simple Keyword Extraction to Bayesian Inference. Afterwards, response can be generated using retrieval-based and generative-based methods. \cite{designandimplementation} 
+\\~\\
+One of the most important components for a chatbot is dialogue management. Technical approaches for a dialogue manager can be characterized as a dialogue grammar, a plan-based approach, or a collaborative approach \cite{dialoguemanagementsystems}, \cite{spokenDialogueTechnology}. The type and amount of knowledge implemented in the manager, the distribution of tasks between the system and the user, and the system's meta-communication (confirmation, clarification, repair and recovery) strategies are the most essential attributes of the dialogue manager. \cite{subjectiveQualityEvaluation} 
+
+\section{Structural Outline}
+The current chapter provides a general introduction to the thesis topic. Whereas, Chapter 2 i.e. Foundations and Related Work, discusses the history of the chatbots along with detailed background and the relevant tasks required to develop a dialogue manager.
+\\~\\
+Moreover, Chapter 3 explains the concept and design of the system. It elaborates the system overview, architecture and capabilities of a system. Also the detailed description of whole framework and dialogue manager developed in this thesis has been described in this chapter.
+\\~\\
+Next, Chapter 4 expresses the users experience evaluating the new approach. It also represents the results gathered by completion of user surveys.
+\\~\\
+Lastly, Chapter 5 discusses and provides the analysis of the results of evaluation portrayed previously in Chapter 4. Furthermore, it also summarizes and concludes the work and tasks performed in this thesis. Finally, the chapter and this document gets closed with an outlook for the future work.
+

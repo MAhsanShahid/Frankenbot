@@ -1,0 +1,154 @@
+%\documentclass[bibtotoc,liststotoc,BCOR5mm,DIV12]{scrbook}
+\documentclass[bibtotoc,liststotoc,BCOR5mm,DIV12,oneside]{scrbook}
+% use this declaration to set specific page margins
+%\usepackage[a4paper , lmargin = {4cm} , rmargin = {2cm} , tmargin = {2cm} , bmargin = {4cm} ]{geometry}
+\usepackage[a4paper]{geometry}
+
+% \usepackage{titlesec}
+% \setcounter{secnumdepth}{4}
+% \usepackage{subcaption}
+\usepackage{float}
+\usepackage[ngerman, english]{babel}
+\usepackage{bibgerm}       	   % german references
+\usepackage[utf8]{inputenc}  % german characters
+\usepackage{graphicx} 				% it's recommended to use PDF images but you can use JPG or PNG as well
+\usepackage{url}           		% format URLs
+\def\UrlBreaks{\do\/\do-}
+\usepackage{hyperref} 				% create hyperlinks
+\usepackage{listings, color}	% for source code
+\usepackage{subfig}						% two figures next to each other (example: figure 3a), figure 3b)
+\usepackage{scrpage2}					% header and footer line
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage[table]{xcolor} % color for the cell
+\usepackage[section]{placeins}
+
+
+%\usepackage{multirow}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+% header and footer line - no header & footer line on pages where a new chapter starts
+\pagestyle{scrheadings}
+\chead{\rightmark}
+\ihead{}
+\ohead{}
+%\ihead{Muhammad Ahsan Shahid}
+\ofoot[]{}
+\ifoot{}
+\cfoot{\thepage}
+%\ifoot{Master Thesis, TU Berlin, Faculty IV, 2019}
+
+%\ifoot{Diploma Thesis, TU Berlin, Fachgebiet AV, 2009}
+
+% set path where images are stored
+\graphicspath{{./img/}}
+\input{./misc/hyphenation} 					% use this file to set explicit hyphenations (doesn't seem to work correctly)
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{5}
+
+% For quotations
+\usepackage{epigraph}
+
+% For json
+\usepackage{bera}% optional: just to have a nice mono-spaced font
+\usepackage{listings}
+\usepackage{xcolor}
+
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+
+\lstdefinelanguage{json}{
+    basicstyle=\normalfont\ttfamily,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    backgroundcolor=\color{background},
+    literate=
+     *{0}{{{\color{numb}0}}}{1}
+      {1}{{{\color{numb}1}}}{1}
+      {2}{{{\color{numb}2}}}{1}
+      {3}{{{\color{numb}3}}}{1}
+      {4}{{{\color{numb}4}}}{1}
+      {5}{{{\color{numb}5}}}{1}
+      {6}{{{\color{numb}6}}}{1}
+      {7}{{{\color{numb}7}}}{1}
+      {8}{{{\color{numb}8}}}{1}
+      {9}{{{\color{numb}9}}}{1}
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+}
+
+% \usepackage[toc,page]{appendix} %for appendix
+\usepackage{pdfpages}
+
+
+
+\begin{document}
+% ---------------------------------------------------------------
+\frontmatter
+    \include{./misc/titlepage}
+   	\thispagestyle{empty}
+    \cleardoublepage
+    
+   \include{./misc/thanx}
+   \thispagestyle{empty}
+   \cleardoublepage
+    
+    \include{./misc/self-assertion} 
+    \thispagestyle{empty}
+    \cleardoublepage
+    
+    
+    \include{./misc/abstract}
+    \thispagestyle{empty}
+    \cleardoublepage
+    
+    \include{./misc/abstract_de}
+    \thispagestyle{empty}
+    
+    
+    \tableofcontents
+    \thispagestyle{empty}
+    
+    % \listofabbreviations
+    % \thispagestyle{empty}
+    
+    \listoffigures
+    \thispagestyle{empty}
+    
+    \listoftables
+    \thispagestyle{empty}
+    
+% --------------------------------------------------------------
+
+\mainmatter % comment single chapters for faster compilation
+
+    \input{./chapters/chapter1}
+    \input{./chapters/chapter2}
+    \input{./chapters/chapter3}
+    \input{./chapters/chapter4}
+    \input{./chapters/chapter5}
+    \input{./chapters/chapter6}
+    %\input{./chapters/chapter7}
+
+% ---------------------------------------------------------------
+\backmatter % no page numbering from here
+    %\input{./misc/acronyms}
+		
+		% if you want to provide a glossary with explanations of important terms put it in here
+
+    \bibliographystyle{unsrt}
+    \bibliography{./bib/references}
+    
+    \input{./misc/annex}
+
+\end{document}
