@@ -31,7 +31,7 @@ The surveys were conducted in English language. Whereas, AttrakDiff's survey has
 \\~\\
 The questionnaires were filled by the participants on their own devices. As link to the deployed chatbot has been shared with them using different social platforms along with an introductory text about the purpose of the study. When the user was interacting with the chatbot all communication was getting stored in the log file for the future records and usage.
 
-\section{Experimental Setup}
+\section{Experimental Setup and Results}
 This research study has been conducted to gather the results for what user has experienced while interacting with the chatbot. The whole experiment itself has been divided in to four major parts mentioned below:
 \begin{enumerate}
     \item Explanation of the chatbot for the participants in order to make its testing successful.
@@ -93,7 +93,7 @@ This section included a question about the user's overall impression about the i
 \end{figure}
 
 \subsubsection*{Familiarity with Existing Chat Bots}
-This section added to the questionnaire just to figure out the experience of the participants with already existing chatbots that whether they are well familiar with the chatbots or are inexperienced with this emerging technology. So that, if majority of them have the good knowledge of any of the existing chatbots, it will provide more strength and solidity to the results gathered from such participants.
+This section added to the questionnaire just to figure out the experience of the participants with already existing chatbots. Whether they are well familiar with the chatbots or are inexperienced with this emerging technology. So that, if majority of them have the good knowledge of any of the existing chatbots, it will provide more strength and solidity to the results gathered from such participants.
 \\~\\
 There were total 3 questions available under this section that participants have to answer:
 \begin{enumerate}
@@ -118,48 +118,56 @@ Fortunately, for the first statement, 16(80\%) appeared to be well familiar with
 \end{figure}
 
 \subsubsection*{Achievement of Goals}
-It highlights whether the user succeeded to achieve the desired goals or not while having an interaction with the chatbot. It contained the following questions in respond to which user checked an option, including or in between of strongly agree to strongly disagree.
+It highlights whether the user succeeded to achieve the desired goals or not while having an interaction with the chatbot. It contained the following questions in respond to which user checked an option, including or in between of strongly agree to strongly disagree. Detailed comparison for all the answers collected for following statements can be found in the Figure \ref{fig:achievGoals}.
 \begin{enumerate}
     \item The information provided by the chat bot was clear.
     \item The provided information was incomplete.
     \item The interaction with the chat bot was efficient.
     \item The chat bot is unreliable.
 \end{enumerate}
-Discussing the results and stats for the very first statement, 13(65\%) participants agreed upon the information provided by the chatbot was clear. Whereas, 3(15\%) were failed to decide about it. Only 4(20\%) just disagreed with it and no one strongly negated it. For better understanding of it just see the Figure \ref{fig:clearInfo}.
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=0.9\textwidth]{img/Clear_Info.PNG}
-    \caption{Stats depicting about the information provided by the chat bot was clear}
-    \label{fig:clearInfo}
+    \includegraphics[width=0.9\textwidth]{img/Achievement_of_Goals.png}
+    \caption{Graphical representation of collected responses for achievement of goals.}
+    \label{fig:achievGoals}
 \end{figure}
 \\~\\
-For the second statement, 10(50\%) disagreed with it which tells that for them the provided information was complete. Whilst 7(35\%) were unable to make any decision about it. This is something can not ignored. It can happen due to various reasons: (i) due to lack of concentration (ii) misinterpretation of information or instructions (iii) chatbot responded falsely and the only reason for it could be a weakly trained Rasa's NLU due to limited training data. But still 50\% answered that the information was complete, so there are high chances that the reason lies somewhere between (i) and (ii). Visuals have been shown in the Figure \ref{fig:incompInfo}.
+Discussing the results and stats for the very first statement, 13(65\%) participants agreed upon the information provided by the chatbot was clear. Whereas, 3(15\%) were failed to decide about it. Only 4(20\%) just disagreed with it and no one strongly negated it. For better understanding of it just see the Figure \ref{fig:achievGoals}.
 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=0.9\textwidth]{img/Incomp_Info.PNG}
-    \caption{Stats depicting about the provided information was incomplete}
-    \label{fig:incompInfo}
-\end{figure}
+% \begin{figure}[!h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{img/Clear_Info.PNG}
+%     \caption{Stats depicting about the information provided by the chat bot was clear}
+%     \label{fig:clearInfo}
+% \end{figure}
 \\~\\
-Moving to what has been concluded from the third statement seems to be something really positive. As 12(60\%) of the participants agreed upon the efficient interaction with the chatbot. Moreover, 4(20\%) failed to decide about it and only other remaining 4(20\%) disagreed with it. Refer to the Figure \ref{fig:effInt} for seeing the detailed graph of it.
+For the second statement, 10(50\%) disagreed with it which tells that for them the provided information was complete. Whilst 7(35\%) were unable to make any decision about it. This is something can not ignored. It can happen due to various reasons: (i) due to lack of concentration (ii) misinterpretation of information or instructions (iii) chatbot responded falsely and the only reason for it could be a weakly trained Rasa's NLU due to limited training data. But still 50\% answered that the information was complete, so there are high chances that the reason lies somewhere between (i) and (ii). Visuals have been shown in the Figure \ref{fig:achievGoals}.
 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=0.9\textwidth]{img/Efficient_Inter.PNG}
-    \caption{Stats depicting about the interaction with the chat bot was efficient}
-    \label{fig:effInt}
-\end{figure}
+% \begin{figure}[!h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{img/Incomp_Info.PNG}
+%     \caption{Stats depicting about the provided information was incomplete}
+%     \label{fig:incompInfo}
+% \end{figure}
 \\~\\
-Lastly, forth statement stats are a bit disappointing. According to only 6(30\%) users, the chatbot was reliable. On contrary, 8(40\%) declared it unreliable and remaining 6(30\%) failed to take any decision about it. The possible reason for its unreliability could be its inability to respond the user for all of his/her queries. And it is happening due to limited data provided for training and also the demo chatbot was designed for limited use cases. In order to design a fully loaded chatbot that can reply to the user for any of his/her utterance, lot of training data and processing is required and within limited time and resources it was not possible. But, it could be done in future. See the Figure \ref{fig:unreliBot} for better understanding of results.
+Moving to what has been concluded from the third statement seems to be something really positive. As 12(60\%) of the participants agreed upon the efficient interaction with the chatbot. Moreover, 4(20\%) failed to decide about it and only other remaining 4(20\%) disagreed with it. Refer to the Figure \ref{fig:achievGoals} for better understanding by visuals.
 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=0.9\textwidth]{img/Unreli_Bot.PNG}
-    \caption{Stats depicting about the chat bot is unreliable}
-    \label{fig:unreliBot}
-\end{figure}
+% \begin{figure}[!h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{img/Efficient_Inter.PNG}
+%     \caption{Stats depicting about the interaction with the chat bot was efficient}
+%     \label{fig:effInt}
+% \end{figure}
+\\~\\
+Lastly, forth statement stats are a bit disappointing. According to only 6(30\%) users, the chatbot was reliable. On contrary, 8(40\%) declared it unreliable and remaining 6(30\%) failed to take any decision about it. The possible reason for its unreliability could be its inability to respond the user for all of his/her queries. And it happened due to limited data provided for training and also the demo chatbot was designed for limited use cases. In order to design a fully loaded chatbot that can reply to the user for any of his/her utterance, lot of training data and processing is required and within limited time and resources it was not possible. But, it could be done in future. See the Figure \ref{fig:achievGoals} for better visualization of the results.
+
+% \begin{figure}[!h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{img/Unreli_Bot.PNG}
+%     \caption{Stats depicting about the chat bot is unreliable}
+%     \label{fig:unreliBot}
+% \end{figure}
 
 \subsubsection*{Communication with the Chat Bot}
 The purpose of this section was to collect the user's opinion that how was the communication with the chatbot. It consisted of the following three questions:
@@ -168,32 +176,41 @@ The purpose of this section was to collect the user's opinion that how was the c
     \item I always knew what to say to the chat bot.
     \item The interaction with the chat bot sounded natural.
 \end{enumerate}
-Total 10(50\%) of the participants disagreed with the statement that the chatbot understood their messages well. And 4(20\%) out of the remaining 10 were not able to decide about it. Remaining 6(30\%) answered positively with it. As majority disagreed with the statement and the possible reason could be that the chatbot responded incorrectly. And the only reason for it could be the problem with natural language understanding. It detected the wrong intent for the user utterance. Graphical representation can be found in the Figure \ref{fig:understWell}.
+Graphical representation for the detailed analysis and comparison of the results for these statements has been shown in the Figure \ref{fig:communwithBot}.
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=0.9\textwidth]{img/Underst_Well.PNG}
-    \caption{Responses for the statement that the chat bot understood messages well.}
-    \label{fig:understWell}
+    \includegraphics[width=0.9\textwidth]{img/Communication_with_the_Chat_Bot.png}
+    \caption{Graphical representation of results collected for the users communication with the chat bot.}
+    \label{fig:communwithBot}
 \end{figure}
 \\~\\
-Coming towards the next statement, 12(60\%) agreed with it that they always knew what to reply or ask the chatbot. Other than those, 3(15\%) failed to make any decision about it and remaining 5(25\%) disagreed with it. Results have been displayed in the Figure \ref{fig:saytoBot}.
+Total 10(50\%) of the participants disagreed with the statement that the chatbot understood their messages well. And 4(20\%) out of the remaining 10 were not able to decide about it. Remaining 6(30\%) answered positively with it. As majority disagreed with the statement and the possible reason could be that the chatbot responded incorrectly. And the only reason for it could be the problem with natural language understanding. It detected the wrong intent for the user utterance. Graphical representation can be found in the Figure \ref{fig:communwithBot}.
 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=0.9\textwidth]{img/Say_to_Bot.PNG}
-    \caption{Responses for the statement that the user always knew what to say to the chat bot.}
-    \label{fig:saytoBot}
-\end{figure}
+% \begin{figure}[!h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{img/Underst_Well.PNG}
+%     \caption{Responses for the statement that the chat bot understood messages well.}
+%     \label{fig:understWell}
+% \end{figure}
 \\~\\
-Responses for the third statement showed that 9(45\%) participants felt the communication as natural. Out of other 11 only 4(20\%) failed to decide about it. Along with that remaining 7(35\%) showed disagreement with it. And the reason could be the wrong intent detection by the NLU. For visuals look in to the Figure \ref{fig:naturalInter}.
+Coming towards the next statement, 12(60\%) agreed with it that they always knew what to reply or ask the chatbot. Other than those, 3(15\%) failed to make any decision about it and remaining 5(25\%) disagreed with it. Results have been displayed in the Figure \ref{fig:communwithBot}.
 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=0.9\textwidth]{img/Natural_Inter.PNG}
-    \caption{Responses for the statement that the interaction with the chat bot sounded natural.}
-    \label{fig:naturalInter}
-\end{figure}
+% \begin{figure}[!h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{img/Say_to_Bot.PNG}
+%     \caption{Responses for the statement that the user always knew what to say to the chat bot.}
+%     \label{fig:saytoBot}
+% \end{figure}
+\\~\\
+Responses for the third statement showed that 9(45\%) participants felt the communication as natural. Out of other 11 only 4(20\%) failed to decide about it. Along with that remaining 7(35\%) showed disagreement with it. And the reason could be the wrong intent detection by the NLU. For visuals, kindly have a look in to the Figure \ref{fig:communwithBot}.
+
+% \begin{figure}[!h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{img/Natural_Inter.PNG}
+%     \caption{Responses for the statement that the interaction with the chat bot sounded natural.}
+%     \label{fig:naturalInter}
+% \end{figure}
 
 \subsubsection*{Behaviour of the Chat Bot}
 Intentions behind adding this section to the questionnaire was to detect the behaviour of the chatbot with the user. It consisted of the seven questions answered by the user on the scale of agreement or disagreement as stated below: 
@@ -206,50 +223,59 @@ Intentions behind adding this section to the questionnaire was to detect the beh
     \item I was able to recover easily from errors. (only in case of errors).
     \item The chat bot behaved in cooperative way.
 \end{enumerate}
-Analysing the results for this section's initial statement, 16(80\%) strongly disagreed with it. Whereas, another 1(5\%) also negated the statement which makes the number total 17(85\%) who portrayed that the responding speed for the chatbot was fast enough as shown in the Figure \ref{fig:respSpeed}. 
+Graphical representation for the detailed analysis and comparison of the results for these statements has been shown in the Figure \ref{fig:behavofBot}.
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=0.9\textwidth]{img/Response_Speed.PNG}
-    \caption{Result about the chat bot's response speed}
-    \label{fig:respSpeed}
+    \includegraphics[width=0.9\textwidth]{img/Behaviour_of_the_Chat_Bot.png}
+    \caption{Graphical representation of results collected for the behaviour of the chatbot.}
+    \label{fig:behavofBot}
 \end{figure}
 \\~\\
-Secondly, 10(50\%) rated the chatbot as friendly. While 7(35\%) other respondents were unable to come up with any decision about it as displayed in the Figure \ref{fig:friendlyBot}. It could be due to the reason that different persons have their own perception about friendliness. Also, the demo topic included the detective bot. So, it was meant to respond with straight forward statements. Which could be felt a bit offensive some times depending upon the user's nature. 
+Analysing the results for this section's initial statement, 16(80\%) strongly disagreed with it. Whereas, another 1(5\%) also negated the statement which makes the number total 17(85\%) who portrayed that the responding speed for the chatbot was fast enough as shown in the Figure \ref{fig:behavofBot}. 
 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=0.9\textwidth]{img/Friendly_Chatbot.PNG}
-    \caption{Result about the chat bot's friendliness}
-    \label{fig:friendlyBot}
-\end{figure}
+% \begin{figure}[!h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{img/Response_Speed.PNG}
+%     \caption{Result about the chat bot's response speed}
+%     \label{fig:respSpeed}
+% \end{figure}
 \\~\\
-Thirdly, the chatbot didn't meet the expectations for 9(45\%) of the participants. Additionally, other 6(30\%) were failed to determine about it and only 5(25\%) stated that it fulfilled their expectations and can be visualized in the Figure \ref{fig:botExpec}. So it can be clearly concluded from it that the chatbot failed to meet the users expectations. The possible reason for it might be same to the statement in the last section that the chatbot didn't understand the messages well.
+Secondly, 10(50\%) rated the chatbot as friendly. While 7(35\%) other respondents were unable to come up with any decision about it as displayed in the Figure \ref{fig:behavofBot}. It could be due to the reason that different persons have their own perception about friendliness. Also, the demo topic included the detective bot. So, it was meant to respond with straight forward statements. Which could be felt a bit offensive some times depending upon the user's nature. 
 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=0.9\textwidth]{img/Chatbot_Expect.PNG}
-    \caption{Result for the expectations from the chat bot}
-    \label{fig:botExpec}
-\end{figure}
+% \begin{figure}[!h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{img/Friendly_Chatbot.PNG}
+%     \caption{Result about the chat bot's friendliness}
+%     \label{fig:friendlyBot}
+% \end{figure}
 \\~\\
-Reviewing the results for the forth statement, 11(55\%) of the respondents showed agreement with the statement that they didn't always know what answer was the chatbot expecting from them as displayed in the Figure \ref{fig:ansExpec}. It could be due to the limitation of the training data as the chatbot was just trained for limited intents but the users were provided with free choice to ask anything from the chatbot. 
+Thirdly, the chatbot didn't meet the expectations for 9(45\%) of the participants. Additionally, other 6(30\%) were failed to determine about it and only 5(25\%) stated that it fulfilled their expectations and can be visualized in the Figure \ref{fig:behavofBot}. So it can be clearly concluded from it that the chatbot failed to meet the users expectations. The possible reason for it might be same to the statement in the last section that the chatbot didn't understand the messages well.
 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=0.9\textwidth]{img/Answer_Expect.PNG}
-    \caption{Result for the users knowledge about the chatbot's expectation}
-    \label{fig:ansExpec}
-\end{figure}
+% \begin{figure}[!h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{img/Chatbot_Expect.PNG}
+%     \caption{Result for the expectations from the chat bot}
+%     \label{fig:botExpec}
+% \end{figure}
 \\~\\
-Checking with the participants opinion about errors made by the chatbot and recovery from them, 9(45\%) stated that chatbot made errors. While 6(30\%) negated it and remaining 5(25\%) were unable to decide about it. But the positive point about the chatbot was, out of those users who faced the error or unable to decide about it during a chat, 10 of them were able to recover easily from the error. In addition to that, 12(60\%) of the participants rated the chatbot as cooperative. On contrary, just 4(20\%) marked it as uncooperative as portrayed in the Figure \ref{fig:cooperBot}.
+Reviewing the results for the forth statement, 11(55\%) of the respondents showed agreement with the statement that they didn't always know what answer was the chatbot expecting from them as displayed in the Figure \ref{fig:behavofBot}. It could be due to the limitation of the training data as the chatbot was just trained for limited intents but the users were provided with free choice to ask anything from the chatbot. 
 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=0.9\textwidth]{img/Cooperative_Chatbot.PNG}
-    \caption{Result about the the chatbot's cooperativity}
-    \label{fig:cooperBot}
-\end{figure}
+% \begin{figure}[!h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{img/Answer_Expect.PNG}
+%     \caption{Result for the users knowledge about the chatbot's expectation}
+%     \label{fig:ansExpec}
+% \end{figure}
+\\~\\
+Checking with the participants opinion about errors made by the chatbot and recovery from them, 9(45\%) stated that chatbot made errors. While 6(30\%) negated it and remaining 5(25\%) were unable to decide about it. But the positive point about the chatbot was, out of those users who faced the error or unable to decide about it during a chat, 10 of them were able to recover easily from the error. In addition to that, 12(60\%) of the participants rated the chatbot as cooperative. On contrary, just 4(20\%) marked it as uncooperative as portrayed in the Figure \ref{fig:behavofBot}.
+
+% \begin{figure}[!h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{img/Cooperative_Chatbot.PNG}
+%     \caption{Result about the the chatbot's cooperativity}
+%     \label{fig:cooperBot}
+% \end{figure}
 
 \subsubsection*{Dialogue Assessment}
 This part of the survey was added to judge the design of the dialogue according to the users perspective. Total six question were asked by the participants for completion of the purpose.
@@ -259,61 +285,70 @@ This part of the survey was added to judge the design of the dialogue according 
     \item I was able to direct the conversation as desired.
     \item I felt in control of the interaction with the chat bot.
     \item The dialogue quickly led to the desired goal.
-    \item The dialogue parts were evenly distributed between me an the chat bot.
+    \item The dialogue parts were evenly distributed between me and the chat bot.
 \end{enumerate}
-As plotted in the Figure \ref{fig:lostTrack} that 7(35\%) strongly disagreed while 6(30\%) simply disagreed with the statement that they lost the track during the communication with the chatbot. On the other hand, 6(30\%) were unable to make any decision and only 1(5\%) just agreed with it. So it can be concluded from the result analysis that maintaining a state for each module with respect to each user has been appeared really useful and effective.
+Graphical representation for the detailed analysis and comparison of the results for these questions has been shown in the Figure \ref{fig:dialogAssess}.
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=0.9\textwidth]{img/Lost_Track.PNG}
-    \caption{Result for users lost track during interaction with the chatbot}
-    \label{fig:lostTrack}
+    \includegraphics[width=0.9\textwidth]{img/Dialogue_Assessment.png}
+    \caption{Graphical representation of results collected for the dialogue assessment.}
+    \label{fig:dialogAssess}
 \end{figure}
 \\~\\
-After analysing the results from the Figure \ref{fig:bumpDialo}, it is not wrong to say that the dialogue was smooth and communication between the users and the chatbot was comfortable and consistent. As, 10(50\%) of the participants showed disagreement with the statement that the dialogue was bumpy. Contrarily, only half of it that is 5(25\%) just find it unstable. Which means by using the modular architecture a stable and smooth dialogue can be designed.
+As plotted in the Figure \ref{fig:dialogAssess} that 7(35\%) strongly disagreed while 6(30\%) simply disagreed with the statement that they lost the track during the communication with the chatbot. On the other hand, 6(30\%) were unable to make any decision and only 1(5\%) just agreed with it. So it can be concluded from the result analysis that maintaining a state for each module with respect to each user has been appeared really useful and effective.
 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=0.9\textwidth]{img/Bumpy_Dialog.PNG}
-    \caption{Result reflecting users opinion about bumpy dialogue}
-    \label{fig:bumpDialo}
-\end{figure}
+% \begin{figure}[!h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{img/Lost_Track.PNG}
+%     \caption{Result for users lost track during interaction with the chatbot}
+%     \label{fig:lostTrack}
+% \end{figure}
 \\~\\
-Nextly, as presented in the Figure \ref{fig:desiredConv} that 8(40\%) of the participants were able to direct the conversation according to their desires. On the other hand, 6(30\%) out of the remaining 12 were unable to drive it according to their wish. And the left out 6(30\%) answered as undecided. And yet again the ratio of the respondents who were able to direct the conversation as desired appeared to be greater than the ones who were not be able to do it. As it was just simply a demo chatbot designed under various limitations of time and resources but still able to capture positivity out of the users. So, if the framework will undergo a proper training and design then it could be a revolutionary transformation for the chatbots.
+After analysing the results from the Figure \ref{fig:dialogAssess}, it is not wrong to say that the dialogue was smooth and communication between the users and the chatbot was comfortable and consistent. As, 10(50\%) of the participants showed disagreement with the statement that the dialogue was bumpy. Contrarily, only half of it that is 5(25\%) just find it unstable. Which means by using the modular architecture a stable and smooth dialogue can be designed.
 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=0.9\textwidth]{img/Desired_Conv.PNG}
-    \caption{Result reflecting users opinion about desired conversation}
-    \label{fig:desiredConv}
-\end{figure}
+% \begin{figure}[!h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{img/Bumpy_Dialog.PNG}
+%     \caption{Result reflecting users opinion about bumpy dialogue}
+%     \label{fig:bumpDialo}
+% \end{figure}
 \\~\\
-As shown in the Figure \ref{fig:chatbotControl}, that the number of participants who agreed and disagreed with the statement that they felt in control of the conversation with the chatbot is same and that is 6(30\%) for both categories. And remaining 8(40\%) were not able to decide about it. Now it is something alarming, as in this case the possible reason could be the topic of the demo chatbot. As I designed the detective chatbot and it was designed in a way to be a bit strict and commanding. 
+Nextly, as presented in the Figure \ref{fig:dialogAssess} that 8(40\%) of the participants were able to direct the conversation according to their desires. On the other hand, 6(30\%) out of the remaining 12 were unable to drive it according to their wish. And the left out 6(30\%) answered as undecided. And yet again the ratio of the respondents who were able to direct the conversation as desired appeared to be greater than the ones who were not be able to do it. As it was just simply a demo chatbot designed under various limitations of time and resources but still able to capture positivity out of the users. So, if the framework will undergo a proper training and design then it could be a revolutionary transformation for the chatbots.
 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=0.9\textwidth]{img/Chatbot_Control.PNG}
-    \caption{Result reflecting users opinion whether they felt that the chat was controlled by the chatbot}
-    \label{fig:chatbotControl}
-\end{figure}
+% \begin{figure}[!h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{img/Desired_Conv.PNG}
+%     \caption{Result reflecting users opinion about desired conversation}
+%     \label{fig:desiredConv}
+% \end{figure}
 \\~\\
-According to the Figure \ref{fig:quickGoal}, 9(45\%) answered that the dialogue quickly led to the desired goal which refers to the fact that the detective game was designed in such manner that the user should be able to reach the final goal as quickly as possible. But also 7(35\%) disagreed with it and the cause behind it could be the wrong intent detection as user typed in something else but NLU recognized it differently due to which chatbot responded with some unrelated statement.
+As shown in the Figure \ref{fig:dialogAssess}, that the number of participants who agreed and disagreed with the statement that they felt in control of the conversation with the chatbot is same and that is 6(30\%) for both categories. And remaining 8(40\%) were not able to decide about it. Now it is something alarming, as in this case the possible reason could be the topic of the demo chatbot. As I designed the detective chatbot and it was designed in a way to be a bit strict and commanding. 
 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=0.9\textwidth]{img/Quick_Goal.PNG}
-    \caption{Result reflecting users opinion about the dialogue quickly led to the goal}
-    \label{fig:quickGoal}
-\end{figure}
+% \begin{figure}[!h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{img/Chatbot_Control.PNG}
+%     \caption{Result reflecting users opinion whether they felt that the chat was controlled by the chatbot}
+%     \label{fig:chatbotControl}
+% \end{figure}
 \\~\\
-Referring to the Figure \ref{fig:evenDist}, 9(45\%) of the people who took part in to the study agreed with a statement that dialogue parts were equally distributed between them and the chatbot whereas, other 9(45\%) were leave it undecided and only 2(10\%) disagreed with it.
+According to the Figure \ref{fig:dialogAssess}, 9(45\%) answered that the dialogue quickly led to the desired goal which refers to the fact that the detective game was designed in such manner that the user should be able to reach the final goal as quickly as possible. But also 7(35\%) disagreed with it and the cause behind it could be the wrong intent detection as user typed in something else but NLU recognized it differently due to which chatbot responded with some unrelated statement.
 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=0.9\textwidth]{img/Even_Parts.PNG}
-    \caption{Result reflecting users opinion about the equal distribution of the dialogue parts}
-    \label{fig:evenDist}
-\end{figure}
+% \begin{figure}[!h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{img/Quick_Goal.PNG}
+%     \caption{Result reflecting users opinion about the dialogue quickly led to the goal}
+%     \label{fig:quickGoal}
+% \end{figure}
+\\~\\
+Referring to the Figure \ref{fig:dialogAssess}, 9(45\%) of the people who took part in to the study agreed with a statement that dialogue parts were equally distributed between them and the chatbot whereas, other 9(45\%) were leave it undecided and only 2(10\%) disagreed with it.
+
+% \begin{figure}[!h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{img/Even_Parts.PNG}
+%     \caption{Result reflecting users opinion about the equal distribution of the dialogue parts}
+%     \label{fig:evenDist}
+% \end{figure}
 
 \subsubsection*{Personal Experience and Impression}
 This segment has been put to the questionnaire in order to collect users experience and personal impression about the chatbot. It also has been completed using series of questions. 
@@ -329,13 +364,22 @@ This segment has been put to the questionnaire in order to collect users experie
     \item It was easy for me to understand the response of the chat bot.
     \item It took me too long to make the chat bot understand my message by using different terms in sentences.
 \end{enumerate}
-As presented in the Figure \ref{}, majority of the participants i.e. 12(60\%) felt that the interaction with the chatbot was pleasant. It could be due to the reason that the user doesn't have to restart the chat whenever he/she wants to move to some different topic. The user was able to jump between different topics at any moment and can handle multiple topics at the same time without loosing the state for the last topic. 
+Graphical representation for the detailed analysis and comparison of the remarks for these assertions has been shown in the Figure \ref{fig:persExpandImp}.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/Personal_Experience_and_Impression.png}
+    \caption{Graphical representation of results collected for the users personal experience and impression.}
+    \label{fig:persExpandImp}
+\end{figure}
 \\~\\
-According to the Figure \ref{}, 11(55\%) respondents responded that they felt relaxed while having a conversation with the chatbot. It was something important to make sure that chatbot is not making someone feel tensed or bad about anything. Furthermore, 10(50\%) of the users also showed disagreement to the statement that high level of concentration was required while using the chatbot. So, from this result it can be concluded that the chatbot and the dialogue design was simple and also user friendly. Additionally, 15(75\%) of the users found the interaction as fun. It was also the main purpose of the Frankenbot to entertain the users instead of making them feel nothing or bored. So, this purpose also gets accomplished. 
+As presented in the Figure \ref{fig:persExpandImp}, majority of the participants i.e. 12(60\%) felt that the interaction with the chatbot was pleasant. It could be due to the reason that the user doesn't have to restart the chat whenever he/she wants to move to some different topic. The user was able to jump between different topics at any moment and can handle multiple topics at the same time without loosing the state for the last topic. 
 \\~\\
-After analysing the result from the Figure \ref{} about the user satisfaction for the chatbot, it can be deduced that the majority of the users 10(50\%) felt satisfied with it. While, 5(25\%) out of the other 10 left it undecided and the remaining 5(25\%) were not satisfied with it.
+According to the Figure \ref{fig:persExpandImp}, 11(55\%) respondents responded that they felt relaxed while having a conversation with the chatbot. It was something important to make sure that chatbot is not making someone feel tensed or bad about anything. Furthermore, 10(50\%) of the users also showed disagreement to the statement that high level of concentration was required while using the chatbot. So, from this result it can be concluded that the chatbot and the dialogue design was simple and also user friendly. Additionally, 15(75\%) of the users found the interaction as fun. It was also the main purpose of the Frankenbot to entertain the users instead of making them feel nothing or bored. So, this purpose also gets accomplished. 
 \\~\\
-Nextly, as figured out from the Figure \ref{}, majority 8(40\%) of the participants disagreed that the chatbot was able to handle the messages well which were out of its scope. Whereas, 7(35\%) of the respondents agreed with it. It happened surely due to the wrong recognition of the intent for the user utterance by the NLU. Otherwise, framework has been designed in such a manner that it should handle such scenario in well organized manner as already explained in the last chapter of this document. In addition to it, 14(70\%) of the respondents showed agreement to the statement that chatbot guided them well to return to the actual topic when they tried to misguide it. It makes the stance clear about the chatbot abilities that it has the skill to well manage the messages which do not lie under its scope provided enrich training data for NLU.
+After analysing the result from the Figure \ref{fig:persExpandImp} about the user satisfaction for the chatbot, it can be deduced that the majority of the users 10(50\%) felt satisfied with it. While, 5(25\%) out of the other 10 left it undecided and the remaining 5(25\%) were not satisfied with it.
+\\~\\
+Nextly, as figured out from the Figure \ref{fig:persExpandImp}, majority 8(40\%) of the participants disagreed that the chatbot was able to handle the messages well which were out of its scope. Whereas, 7(35\%) of the respondents agreed with it. It happened surely due to the wrong recognition of the intent for the user utterance by the NLU. Otherwise, framework has been designed in such a manner that it should handle such scenario in well organized manner as already explained in the last chapter of this document. In addition to it, 14(70\%) of the respondents showed agreement to the statement that chatbot guided them well to return to the actual topic when they tried to misguide it. It makes the stance clear about the chatbot abilities that it has the skill to well manage the messages which do not lie under its scope provided enrich training data for NLU.
 \\~\\
 Moving to the next statement, 10(50\%) of the users agreed that they were able to continue the chat without any stoppage. It means the chatbot was working well for them as they wanted. The chatbot nor the user were reluctant to each other. It can also be concluded from this result that the dialogue was well structured and designed in order to perform smooth conversation without any objection or hesitation. Another important factor that can't be neglected is that the user should be able to understand the chatbot's response. So, 13(65\%) of the participants were able to do so. Which also marked this property as accomplished for the chatbot.
 \\~\\
@@ -350,17 +394,71 @@ This part of the survey has been added to gather the users opinion about the cha
     \item I would like to use the chat bot again in the future.
     \item The chat bot operation was worthwhile.
 \end{enumerate}
-According to the result deduced from the Figure \ref{}, 15(75\%) of the users contradicted with the statement that the chatbot was difficult to use. Which means the majority of the participants found it easy to use. Additionally, again the same amount of the respondents i.e. 15(75\%) discovered that it was easier to understand the chatbot. It could be due to several reasons like the information provided was enough, the chatbot's ability to guide the user, structured dialogue and good understanding of the chatbot's response by the user.
+Graphical representation for the detailed analysis and comparison of the responses for these assertions has been shown in the Figure \ref{fig:usabil}.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/Usability.png}
+    \caption{Graphical representation of results collected for the chatbot's usability.}
+    \label{fig:usabil}
+\end{figure}
+\\~\\
+According to the result deduced from the Figure \ref{fig:usabil}, 15(75\%) of the users contradicted with the statement that the chatbot was difficult to use. Which means the majority of the participants found it easy to use. Additionally, again the same amount of the respondents i.e. 15(75\%) discovered that it was easier to understand the chatbot. It could be due to several reasons like the information provided was enough, the chatbot's ability to guide the user, structured dialogue and good understanding of the chatbot's response by the user.
 \\~\\
 Furthermore, 8(40\%) of the respondents disagreed with the statement that chatbot was too inflexible. Whereas, 7(35\%) showed agreement on this statement. This mixed opinion of user could be just because of the reason that the chatbot was designed in a way that it should guide the user to return to the actual topic instead of continuing the chat on any user's desired topic. As the chatbot has been trained using limited data, time and resources. Once, it will undergo good training then one can easily make it work for all user utterances regardless of the specific topic.
 \\~\\
 At the end, the users were asked whether they want to use the chatbot again in future. And 11(55\%) replied positively. Contrarily, only 4(20\%) responded negatively. Moreover, they were also asked to rate the chatbot's functioning whether it's worth the time and effort spent. And majority i.e. 11(55\%) of the participants agreed with it. On the other hand, only 4(20\%) of respondents disagreed with it.
 
 \subsection{Evaluation via AttrakDiff}
-The tool's single evaluation method has been used in order to judge the chatbot on the basis  of the following qualities:
-\begin{itemize}
-    \item Hedonic quality (joy of use, emphasized stimulation, identification and evocation generated by the system).
-    \item Pragmatic quality (usefulness, efficiency, easy to use).
-\end{itemize} 
+After completing the Frankenbot's Experience Survey, users have been requested to complete the AttrakDiff's standardized questionnaire to measure that how the users perceived the design, quality and usability of the chatbot.
+\\~\\
+The AttrakDiff is an institutional questionnaire that has been used to rate the products using the series of several word pairs. Each word pair consists of the options as a linear scale from 1 to 7. Option at position 1 is a word while on number 7 there also exists a word but its acronym \cite{attrakdiffQuest}. These pairs of the words are classified into three following categories: (i) Pragmatic Quality, it includes the word pairs like “cumbersome - straight forward” and “impractical - practical”. (ii) Hedonic Quality, the words pairs like “tacky - stylish” and “unimaginative - creative” lies under this category. And (iii) Attractiveness, word pairs such as “pleasant - unpleasant” and "ugly - attractive" are grouped under this category. \cite{alex}
+\\~\\
+Both hedonic as well as pragmatic qualities have the great influence on the attractiveness of the system \cite{inflOfHedandPrag}. As shown in the Figure \ref{fig:attrakMod}.
 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{img/AttrakDiff_Model.PNG}
+    \caption{Main Concept of the AttrakDiff's Model. \cite{inflOfHedandPrag}}
+    \label{fig:attrakMod}
+\end{figure}
+\\~\\
+The tool's single evaluation method has been used in order to judge the chatbot on the basis of the following qualities:
+\begin{itemize}
+    \item Hedonic quality (HQ), it includes 14 word pairs which refers to the joy of use, emphasized stimulation, identification and evocation generated by the system. It has been further divided in to two subcategories on the basis on Identification (HQ-I) and Stimulation (HQ-S) in the current version of the AttrakDiff. The HQ-I is associated with the way products communicate important personal values as compared to other relevant products. Moreover, HQ-S is an extent to which a product is perceived as challenging or novel.
+    \item Pragmatic quality (PQ), it involves 7 word pairs which reflect the system's usefulness, efficiency and how easy is it to use.
+    \item Attractiveness (ATT), it is also comprised of 7 items that are being used to judge the system's pleasantness and how catchy is it according to the user's point of view.
+\end{itemize} 
+Coming to the results gathered using Attakdiff's questionnaire and also what word pairs have been used in single evaluation method of it. And word pairs according to their categories and subcategories have been displayed in the Figure \ref{fig:descofWordPair}.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/Description_of_word_pairs.png}
+    \caption{Description of the word pairs along with the results.}
+    \label{fig:descofWordPair}
+\end{figure}
+\\~\\
+The AttrakDiff questionnaire contains the information for pragmatic and hedonic quality of the interactive system. The language of the study was English but the participants also have the option for German.
+\\~\\
+As shown in the Figure \ref{fig:descofWordPair}, the linear scale has been appointed the values from -3 to +3. The value -3 has been assigned to the negative aspect of the word pair e.g. "unpleasant". While, 0 lies in middle of the negative and positive aspects and referred as neutral. Whereas, +3 has been referred to the positive aspect of the word pair e.g. "pleasant".
+\\~\\
+The division of the word pairs according to their groups and classification with seven items each can also be inferred from the Figure \ref{fig:descofWordPair}. The word pairs starting from "technical - human" till "unruly -manageable" lies under the pragmatic (PQ) category. Furthermore, word pairs from "isolating - connective" to "unpresentable - presentable" falls under hedonic attribute group named Identification (HQ-I). Additionally, word pairs ranged from "conventional - inventive" and till "ordinary - novel" have been put under the shadow of hedonic stimulation (HQ-S). Lastly, Attractiveness (ATT) includes the set of the word pairs starting from "unpleasant - pleasant" and ending on "discouraging - motivating". 
+\\~\\
+Overall, the pragmatic quality for the chatbot rated by the participants is positive. It has been deduced from the results displayed in the Figure \ref{fig:descofWordPair}. Respondents rated it neither technical nor human. Also, this word pair has nothing to do with the chatbot. Secondly, users rated it "Simple" with the positive mark greater than 1. The greatest peak at the positive side for the pragmatic section goes near to 2 for the term "Straightforward". Which means it is easy to understand and uncomplicated. Moreover, users also found the chatbot practical, clearly structured, and manageable. The only negative point almost near to 0 has been encountered i.e. the chatbot is unpredictable. The possible reason for it could be the responses of the demo detective bot. But it has been designed like this for fun purpose. So by the results it has been inferred that the users found the chatbot useful, efficient and easy to use.
+\\~\\
+Moving to the hedonic assessment, firstly hedonic identification ability (HQ-I) of the system has been tested using different word pairs that how the chatbot is delivering the important personal values. It can also be inferred from the results portrayed in the Figure \ref{fig:descofWordPair} that as a whole HQ-I appeared to be positive. The participants of this study graded the chatbot as connective, professional, stylish, integrating, and highly presentable. As the word pairs "cheap - premium" and "seaparates me - brings me closer" do not make any sense for the chatbot and answered as neutral. It can be inferred from the results that the chatbot accomplished its task to deliver the values that users were expecting from it and it fulfilled the users expectations. 
+\\~\\
+Moreover, hedonic stimulation (HQ-S) has been used to measure the chatbot's challenging ability according to the users perspective. Overall results for it are showing positive trend. The users found it inventive, highly creative, bold, innovative, captivating and challenging. But the arc for the term "ordinary - novel" has been graded as neutral. As users can see many other much improvised and state of the art chatbots like Google's Assistant, Apple's Siri and Amazon's Alexa. So, they just considered it as a normal chatbot. It could be the reason that they neither rated it as ordinary nor novel. But instead of that by taking overall result in to the account, the users found it challenging, interesting and fascinating.
+\\~\\
+Finally, attractiveness has been measured for the chatbot by taking the results from PQ and HQ in to the consideration and by using separate related word pairs for it. By the results gathered from the participants responses, it can be stated undoubtedly that all the users found it pleasant and attractive. As the values for all the terms are positive. Which also makes it likeable, inviting, good, appealing and motivating.
+\\~\\
+According to the Figure \ref{fig:avgValAttrak}, if the average values are considered to grade the quality of the chatbot then it is not wrong to say that the attractiveness(ATT) has the highest value 0.75. While, pragmatic quality(PQ) has been placed at the second position with the value of 0.72. On the other hand among hedonic quality race, the challenging aspect of the chatbot is leading as hedonic stimulation(HQ-S) has the value 0.56. Moreover, the chatbot succeeded in delivering the important values to the users at the lowest with the value of 0.46. As it is not wrong to say that the initial chatbot has been rated well in all aspects. But the average values lie just under the category of low positive. None of the sections collectively crossed the mark of +1 whereas the maximum limit that can be reached is +3. So, as the initial start these results can be considered as good. But it will not be lame to say that the chatbot must go through some more training, structuring and designing in order to get improved for its next version to reach the desired level for its users.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{img/Diagram_of_average_values.png}
+    \caption{Average values for PQ, HQ-I, HQ-S and ATT}
+    \label{fig:avgValAttrak}
+\end{figure}
+\\~\\
 
