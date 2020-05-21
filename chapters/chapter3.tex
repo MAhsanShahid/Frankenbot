@@ -59,7 +59,7 @@ There are some benefits for using modular architecture. Just for example, consid
 \subsubsection*{Modular Architecture's Characteristics}
 By using this architecture many features can be unlocked. Reusability and performance can also be enhanced as mentioned below:
 
-\paragraph*{Simpler but robust dialogue trees}
+\paragraph*{Simpler but robust dialogue trees\label{par:simplerTree}}
 The same dialogue as mentioned above but with the Frankenbot's framework modular architecture is shown in Figure \ref{fig:modArch2}. As you can notice the dialogue tree is less complicated and more powerful.
 \begin{itemize}
 \item Jump back to root node is not necessary.
@@ -312,8 +312,8 @@ Another important attribute available is response sequential counter. Its main t
 \subparagraph*{Configurations \label{par:config}}
 In order to make chatbot work it is really important to provide it with proper configurations. Frankenbot needs three following directories in order to function:
 \begin{enumerate}
-    \item bot directory; It should be provided with the bot's directory name as a command line parameter while running the project. For example, the running command in my case is "python app.py detective". In this command "detective" is a name of directory which should contain json file for initializing a bot. And it should be named as "frankenbot.json". 
-    \item Furthermore, the bot directory must contain training data directory named as "rasa". Firstly, this sub-directory must contain a configuration file named as "config\_spacy.yaml" defining pipelines required for Rasa NLU Training\cite{rasapipeline}. Secondly, json files must be available with a training data for each module in "frankenbot.json". And the names for those training files should be same as module id assigned to a module for which it contains training data. For example, "frankenbot.json" contains two modules and ids assigned to them are detective\_tree and general\_tree. So, the training files should be named as "detective\_tree.json" and "general\_tree.json".
+    \item bot directory; It should be provided with the bot's directory name as a command line parameter while running the project. For example, the running command in my case is "python app.py detective". In this command "detective" is a name of directory which should contain json file for initializing a bot. And it should be named as "frankenbot.json" (see Appendix \ref{appen:frankJson} to have a look on actual json data used for structuring of the Frankenbot). 
+    \item Furthermore, the bot directory must contain training data directory named as "rasa". Firstly, this sub-directory must contain a configuration file named as "config\_spacy.yaml" defining pipelines required for Rasa NLU Training\cite{rasapipeline} (see Appendix \ref{appen:rasaConf} to have a look on actual pipelines used). Secondly, json files must be available with a training data for each module in "frankenbot.json". And the names for those training files should be same as module id assigned to a module for which it contains training data. For example, "frankenbot.json" contains two modules and ids assigned to them are detective\_tree and general\_tree. So, the training files should be named as "detective\_tree.json" and "general\_tree.json" (see Appendix \ref{appen:trainDF} to have a look on actual json training data used for both training of modules in the Frankenbot).
     \item Lastly, the model directory is required to store the rasa models produced after the model gets trained for each module. It can be any directory but one has to provide appropriate path to it.
 \end{enumerate} 
 
