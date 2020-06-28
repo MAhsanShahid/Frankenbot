@@ -7,7 +7,7 @@ This chapter illustrates the initial purpose of introducing the chatbots and why
 % chatbots definition and brief historical background.
 
 \section{Chatbots History}
-According to Shawar and Atwell (2007) initially chatbots were introduced in 1960's and the key idea behind it was to make the communication feel real like humans \cite{ChatbotsAreTheyReallyUseful}. In addition to it, as stated by Zadrozny et al. (2000) in order to make humans interact with the computers it can only be led by making humans "to express their interest, wishes, or queries directly and naturally, by speaking, typing, and pointing" \cite{NaturLangDialPersInter}. For accomplishment of such objectives the chatbots were introduced \cite{ChatbotsAreTheyReallyUseful}. But now their applications are extended just like their scope. Mostly these artificial agents have covered the entertainment sector, information search and assisting humans in e-commerce and business sector. But when it comes to replicate the human beings it is still one of the biggest challenge in the present. As understanding natural language, grabbing feelings, verbal structure, gestures and body language just like living beings are the main hindrances for a machine to act like a human \cite{CreatingChatbotsToTalk}.    
+According to Shawar and Atwell (2007) initially chatbots were introduced in 1960's and the key idea behind it was to make the communication feel real like humans \cite{ChatbotsAreTheyReallyUseful}. In addition to it, as stated by Zadrozny et al. (2000) in order to make humans interact with the computers it can only be led by making humans "to express their interest, wishes, or queries directly and naturally by speaking, typing, and pointing" \cite{NaturLangDialPersInter}. For accomplishment of such objectives the chatbots were introduced \cite{ChatbotsAreTheyReallyUseful}. But now their applications are extended just like their scope. Mostly these artificial agents have covered the entertainment sector, information search and assisting humans in e-commerce and business sector. But when it comes to replicate the human beings it is still one of the biggest challenge in the present. As understanding natural language, grabbing feelings, verbal structure, gestures and body language just like living beings are the main hindrances for a machine to act like a human \cite{CreatingChatbotsToTalk}.    
 \\~\\
 Many companies claim for operating their own chatbots and doing research on them. As mentioned on the website "botnerds.com"\cite{botnerds}, the stats for spring 2017 are as follows:
 \begin{itemize}
@@ -59,7 +59,7 @@ Next section provides the technical knowledge of the dialogue systems.
 % Now digging in to the generalised bots that how can they be built smart enough to deliver humanly. And then there comes a human characteristic which makes human superior to other beings known as intelligence.
 
 \section{Dialogue Systems}
-The importance of human computer interaction has raised drastically in last few years. It is due to its rising potential towards solving daily life problems especially providing aid in commercial challenges. With the advancement of the big data and machine learning, the self functioning virtual assistant is not a dream any more. Jurafsky and Martin (2019) classified dialogue systems as: (i) Systems designed to complete a task i.e. Task-oriented dialogue agents and (ii) Systems for extended unstructured conversation i.e. Chatbots \cite{dialogsysandchatbots}.
+The importance of human computer interaction has raised drastically in last few years. It is due to its rising potential towards solving daily life problems especially providing aid in commercial challenges. With the advancement of the big data and machine learning, the self functioning virtual assistant doesn't seem to be impossible. Jurafsky and Martin (2019) classified dialogue systems as: (i) Systems designed to complete a task i.e. Task-oriented dialogue agents and (ii) Systems for extended unstructured conversation i.e. Chatbots \cite{dialogsysandchatbots}.
 % So, based on the applications of conversation agents, the dialogue systems can be divided in to two main categories i.e. Task Oriented Systems and Non-Task Oriented Systems (chatbots).
 
 \subsection{Task Oriented Agents}
@@ -95,7 +95,7 @@ Jurafsky and Martin (2019) narrates that the state-of-the-art task-oriented dial
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.9\textwidth]{img/frame.PNG}
-    \caption{A frame showing each slot along with its type and question used to fill it. \cite{dialogsysandchatbots}}
+    \caption{A frame showing each slot along with its type and related question. \cite{dialogsysandchatbots}}
     \label{fig:frame}
 \end{figure}
 
@@ -208,14 +208,14 @@ As already mentioned in the previous section that the conversational agent devel
 \\~\\
 Starting with natural language processing(NLP), it plays an important role in dialogue systems to understand the semantics of the inputted text and is also responsible for detecting the intents and entities. Moreover, intent and entity classification could be done using variety of techniques that vary from Simple Keyword Extraction to Bayesian Inference. Afterwards, response could be generated using retrieval-based and generative-based methods \cite{designandimplementation}.  
 \\~\\
-Once the response has been generated, it is passed to the dialogue manager which is responsible to manage the dialogue as a whole. It makes a decision about how and what to respond to the user. Initial technical approaches used for dialogue management had been characterized as a dialogue grammar, a plan-based approach, or a collaborative approach \cite{dialoguemanagementsystems}\cite{spokenDialogueTechnology}. Currently, advanced approaches known as statistical methods are helpful for enhancement of strategies for dialogue management \cite{statisDialManag}. As these models have the capability to get trained using substantial dialogues providing robustness to the system \cite{statisDialManag}. Knowledge management, dialogue state and response handling are the fundamental tasks for the  and the system's meta-communication (confirmation, clarification, repair and recovery) strategies are the most essential attributes of the dialogue manager \cite{subjectiveQualityEvaluation}.
+Once the response has been generated, it is passed to the dialogue manager which is responsible to manage the dialogue as a whole. It makes a decision about how and what to respond to the user. Initial technical approaches used for dialogue management had been characterized as a dialogue grammar, a plan-based approach, or a collaborative approach \cite{dialoguemanagementsystems}\cite{spokenDialogueTechnology}. Currently, advanced approaches known as statistical methods are helpful for enhancement of strategies for dialogue management \cite{statisDialManag}. As these models have the capability to get trained using substantial dialogues providing robustness to the system \cite{statisDialManag}. Knowledge management, dialogue state and response handling are the fundamental tasks for chatbot. The system's meta-communication (confirmation, clarification, repair and recovery) strategies are the most essential attributes of the dialogue manager \cite{subjectiveQualityEvaluation}.
 
 % \subsection{Language Identification}
 % When it comes to larger scale and diversed natural language processing then recognizing a language of a text is a necessary initial step. Some languages contains homographs i.e. Same words with different meanings. It is really a challenging task for an algorithm to understand and grab the correct semantics if language is not known beforehand. \cite{designandimplementation}
 % \\~\\
 % It is assumed for this masters thesis that messages will be provided using one language only. Despite of it, there exist methods for inferring different languages in a single document or piece of text and can be found in the document \cite{multilanguagedetection}.
 \subsection{Natural Language Processing(NLP)}
-It is an essential chatbot element. NLP is a technical process for better understanding of the user utterance. It makes the chatbots to comprehend the semantics and the user intention behind the conversation. It is used to add more humanly characteristics to a chatbot and to make the dialogue feel more realistic. By adding NLP to a chatting agent, it becomes capable of learning and getting trained for any type of the query or command provided by the user. Some methods for mastering the semantics of the text and for deep learning are discussed underneath. 
+It is an essential chatbot element. NLP is a technical process for better understanding of a user utterance. It makes the chatbots to comprehend the semantics and the user intention behind the conversation. It is used to add more humanly characteristics to a chatbot and to make the dialogue feel more realistic. By adding NLP to a chatting agent, it becomes capable of learning and getting trained for any type of the query or command provided by the user. Some methods for mastering the semantics of the text and for deep learning are discussed underneath. 
 % Word Embedding and Recurrent Neural Networks are commonly used techniques for deep learning in this regard \cite{deepLearnBasedNLP}. 
 
 % \subsubsection*{Deep Learning Techniques}
@@ -233,7 +233,7 @@ Determining the function of the text whether it is a question, command, suggesti
 \subsubsection*{Intent and Entity Classification}
 It is another way of understanding the meaning of the text represented in the form of natural language. Domain specific dialogue acts are known as intents. Intent represents the user's real intention and goal what he/she is trying to convey. Whereas, entities are modifiers for an intent. Entities could also be referred to as slots. On the basis of the detected intent the user can be directed further to available dialogue options \cite{sluSys}. 
 \\~\\
-By means of NLP, conversational agent is able to classify an intent and entity(s) in the user utterance. The main idea behind it for a chatbot is to detect the purpose of the talk that user is trying to convey. For identification, the multi-classification problem is usually solved by labelling the utterances according to the possible user intentions and providing some relative names to them. Furthermore, there exist some techniques to complete this task varying from simple keyword extraction to Bayesian inference. These methods are meant to identify the user's request with the help of various messages. Well known LSTM\cite{lstm} networks are used to perform this task due to their high performing and delivering capacity \cite{intentclassificationusinglstm}.
+By means of NLP, conversational agent is able to classify an intent and entity(s) in a user utterance. The main idea behind it for a chatbot is to detect the purpose of a talk that user is trying to convey. For identification, the multi-classification problem is usually solved by labelling the utterances according to the possible user intentions and providing some relative names to them. Furthermore, there exist some techniques to complete this task varying from simple keyword extraction to Bayesian inference. These methods are meant to identify the user's request with the help of various messages. Well known LSTM\cite{lstm} networks are used to perform this task due to their high performing and delivering capacity \cite{intentclassificationusinglstm}.
 
 \subsubsection*{Information Extraction}
 Using this method for grasping the semantics, the unstructured text is transformed to structured grammar and passed to dialogue manager for further processing \cite{archDesDev}. 
@@ -265,7 +265,7 @@ Recurrent Neural Networks(RNNs) are the neural networks specifically designed fo
 \end{itemize}
 
 \subsection{Response Generation \label{sec:respgen}}
-Once the NLP component is dine with its part then the gathered information is passed to response generator. It is responsible to generate some meaningful response to make the communication effective. So for this purpose it is necessary for a bot to reply coherently according to the context of conversation. This challenging task is executed using following pair of modules \cite{designandimplementation}:
+Once the NLP component is dine with its part then the gathered information is passed to response generator. It is responsible to generate some meaningful response to make the communication effective. So, for this purpose it is necessary for a bot to reply coherently according to the context of conversation. This challenging task is executed using following pair of modules \cite{designandimplementation}:
 \begin{itemize}
 \item Module to provoke list of competitive responses.
 \item Module to select the most relevant reply based on some weighted value or specific metrics.
@@ -282,7 +282,7 @@ These methods consist of a humongous database containing successive responses. C
     \label{fig:rbm}
 \end{figure}
 \\~\\
-The primary and fundamental step to achieve the retrieval-based method is message and response matching. The basic purpose of matching algorithms is to minimize the semantics difference between the responses and the messages \cite{surveyondialogsystems}. Two of the such techniques are mentioned below:
+The primary and fundamental step to achieve the retrieval-based method is message and response matching \cite{surveyondialogsystems}. The basic purpose of matching algorithms is to minimize the semantics difference between the responses and the messages \cite{surveyondialogsystems}. Two of the such techniques are mentioned below:
 % \subparagraph*{Single Turn Response Matching}
 \paragraph*{Single Turn Response Matching}
 In this type of matching the only responsible factor for response generation is the message itself. Message context and successive answer are represented as a vector \cite{surveyondialogsystems}. 
@@ -291,7 +291,7 @@ In this type of matching the only responsible factor for response generation is 
 Unlike single turn matching, current utterance along with all past messages are responsible for producing the most suitable response that best matches the overall context of the conversation \cite{surveyondialogsystems}.
 
 \subsubsection*{Generative Methods}
-Unlike retrieval-based methods, agents composed of generative models don't need pre-generated responses. They are capable of producing a new response based on the user's utterance using generative models. For generating a suitable response it is necessary for the model to be trained enough. Unfortunately, performance of these models is still not sufficient enough to attract the companies due to various restrictions forced by the corporate \cite{designandimplementation}.  Basic method for neural generative models has been briefly discussed below:
+Unlike retrieval-based methods, agents composed of generative models don't need pre-generated responses. They are capable of producing a new response based on the user's utterance using generative models. For generating a suitable response it is necessary for the model to be trained enough. Unfortunately, performance of these models is still not sufficient enough to attract the companies due to various restrictions forced by the corporate \cite{designandimplementation}. Basic method for neural generative models has been briefly discussed below:
 
 \begin{figure}[h]
     \centering
@@ -299,7 +299,7 @@ Unlike retrieval-based methods, agents composed of generative models don't need 
     \caption{Generative-based Methods Example \cite{designandimplementation}}
     \label{fig:gbm}
 \end{figure}
-\\~\\
+
 \paragraph*{Sequence-to-Sequence Models}
 Neural networks are being used by these models in order to symbolize dialog history and to produce useful responses \cite{surveyondialogsystems}. The systems based on these models doesn't need much knowledge base and pre-defined rules to generate natural language responses.
 \\~\\
@@ -721,7 +721,7 @@ AttrakDiff is a standardized tool designed to measure the attractiveness(usabili
 \\~\\
 As shown in Figure \ref{fig:attrakMod} that attractiveness is based upon pragmatic and hedonic qualities of the system. Furthermore, hedonic quality is divided in to two categories in the current version of the AttrakDiff: (i) Identification (HQ-I) and (ii) Stimulation (HQ-S). Pragmatic quality(PQ) includes the usability of the system i.e. the system delivered for what it has been designed. And as a consequence of PQ, user satisfaction gets collected \cite{PqHq}. Whereas, HQ-I is associated with the way products communicate important personal values as compared to other relevant products. Moreover, HQ-S is an extent to which a product is perceived as challenging or novel. 
 
-\begin{figure}[!h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{img/AttrakDiff_Model.PNG}
     \caption{Main Concept of the AttrakDiff's Model \cite{inflOfHedandPrag}.}

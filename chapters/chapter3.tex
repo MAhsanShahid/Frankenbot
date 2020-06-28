@@ -23,15 +23,13 @@ As Frankenbot has been designed to handle the answers for the questions thrown b
 \subsection{Training for NLU \label{sec:expchatbot}}
 RASA NLU component has been adopted for training of Frankenbot in order to understand the messages well. Additionally, it has been also used for detecting intent and entities in user utterances along with their respective confidence values.  It has been discussed thoroughly under the Section \ref{subsec:rasanlu}.  
 \\~\\
-The detective model gets trained using 115 examples including 6 distinct intents ('\#affirm', '\#bye', '\#robbery\_time\_info', '\#purchasing', '\#greet', '\#negation'). Whereas, the general talk model has been trained by means of 205 statements including 9 distinct intents ('\#gossip', '\#psychology', '\#humor', '\#emotion', '\#coronaStats', '\#botFood', '\#general\_talk', '\#botProfile', '\#corona'). The json data provided for training can be found in Appendix ??????????????.  
+The detective model has been trained using 115 examples including 6 distinct intents ('\#affirm', '\#bye', '\#robbery\_time\_info', '\#purchasing', '\#greet', '\#negation'). Whereas, the general talk model has been trained by means of 205 statements including 9 distinct intents ('\#gossip', '\#psychology', '\#humor', '\#emotion', '\#coronaStats', '\#botFood', '\#general\_talk', '\#botProfile', '\#corona'). The json data provided for training can be found in Appendix \ref{appen:traindatastats}.
 
 \subsection{Response Generation}
 Lastly, response is generated on the basis of the detected intent with highest confidence for a user utterance among all the available modules. Moreover, Frankenbot also checks for the current dialogue state and consider different parameters like last active module and node for each user before responding. And for each intent there exists a list of responses. And a response gets selected on the basis of the mode assigned to it which can be either random or sequential.  
 
-\section{Frankenbot as a Concept}
-This section highlights the theoretical functioning of the Frankenbot.
-\\~\\
-Starting from the web based interface designed for the users to provide an input in form of a text message. This input is passed to the chatbot by making simple get request using Web API. Once it is available to the chatbot for further processing then actual operation gets started.
+\section{Frankenbot as Concept}
+This section highlights the theoretical functioning of the Frankenbot. Starting from the web based interface designed for the users to provide an input in form of a text message. This input is passed to the chatbot by making simple get request using Web API. Once it is available to the chatbot for further processing then actual operation gets started.
 \\~\\
 Initially, the message is passed to a dialogue manager along with the session information and current dialogue state for a user. Dialogue manager holds the complete dialogue structure in form of the dialogue trees. The number of dialogue trees represent the number of modules contained within a dialogue manager. Furthermore, each dialogue tree is composed of the tree nodes containing the modular information about the specific sub-state of a dialogue along with the intents and comparative responses.
 \\~\\
@@ -50,7 +48,7 @@ The Frankenbot is a chatbot composed of multiple chatbots. The design composes m
     \label{fig:frankOver}
 \end{figure}
 \\~\\
-As displayed, example is composed of two modules: (i) "Dialogues Greetings and Small Talk" and (ii) "Question Answering System". And each module includes a dialogue tree demonstrating complete dialogue structure for the respective module. So, "Dialogue Tree #1" belongs to greetings module and "Dialogue Tree #2" is linked with Q\&A module. Module and dialogue tree has been explained in the sub-section below.
+As displayed, example is composed of two modules: (i) "Dialogues Greetings and Small Talk" and (ii) "Question Answering System". And each module includes a dialogue tree demonstrating complete dialogue structure for the respective module. So, "Dialogue Tree #1" belongs to greetings module and "Dialogue Tree #2" is linked with Q\&A module. Module and dialogue tree has been explained in the section below.
 
 \subsection{Module}
 A module can provide the answer to a user utterance. Therefore it requires an activation function Z that maps the current user utterance and the system state to a real number.
@@ -67,7 +65,7 @@ For every user utterance the dialogue manager calls all activation functions and
 \item Knowledge Graph \cite{knowlGraph}.
 \end{itemize}
 \\~\\
-As a theory, a module can be more than a dialogue tree. Other systems (question answering, neural systems etc.) can also fit in this framework, as long as they implement an activation function. 
+As a theory, a module can be more than a dialogue tree. Other systems (question answering, neural systems etc.) can also fit in this framework, as long as they implement an activation function but it still needs to be tested. 
 \\~\\
 The classic slot-filler/single dialogue tree based architecture is a basic possible module of the Frankenbot. Therefore the Frankenbot is at least as powerful as the slot-filler.
 
@@ -125,7 +123,7 @@ Imagine a chatbot from the smartphone support domain. Two dialogues require how 
     \label{fig:modReus2}
 \end{figure} 
 \\~\\
-The same dialogue graph with a traditional dialogue tree has shown in Figure \ref{fig:modReus3} which has several restrictions and disadvantages. The module should be defined twice, more explicit relations needed to go back from one state to another and the dialogue trees are more complicated. Also the number of nodes and transitions will be higher as considered to Frankenbot's architecture resulting to higher processing as shown in the Table \ref{tab:tradVsFran}.
+The same dialogue graph with a traditional dialogue tree is shown in Figure \ref{fig:modReus3} which has several restrictions and disadvantages. The module should be defined twice, more explicit relations needed to go back from one state to another and the dialogue trees are more complicated. Also the number of nodes and transitions will be higher as considered to Frankenbot's architecture resulting to higher processing as shown in the Table \ref{tab:tradVsFran}.
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.9\textwidth]{img/Module_Reusability_3.PNG}
@@ -164,7 +162,7 @@ The dialogue manager chooses the module with the highest activation function. Bu
 Z is the activation function. History(module) is a term that gets bigger if the module has been active before. Therefore the module that was used before has a higher probability of being chosen which refers to the chatbot staying in the topic characteristic.
 
 \section{Frankenbot: System Architecture}
-Frankenbot’s system architecture has been sketched in Figure \ref{fig:sysArch}. It consists of a server and server-side web API. The user communicates with the help of a browser, and sends request to a server having the framework deployed on it. He\_she sends a request from a browser using the Web API which communicates with a server. Furthermore, server contains deployed Frankenbot's framework built using Python 3. Web server loads a data for a chatbot from json file for now but will be integrated with some database in future. Whereas, frontend for user's interaction has built simply using javascript, html and css. Web API has been built using python library known as Flask \cite{flask}. 
+Frankenbot’s system architecture has been sketched in Figure \ref{fig:sysArch}. It consists of a server and server-side web API. The user communicates by means of a browser and sends request using web API to a server. Furthermore, server contains the deployed Frankenbot's framework built using Python 3. Web server loads a data for a chatbot from json file for now but will be integrated with some database in future. Whereas, frontend for user's interaction has built simply using javascript, html and css. Web API has been built using python library known as Flask \cite{flask}. 
 
 \begin{figure}[!h]
     \centering
@@ -189,7 +187,7 @@ For utilizing it in a Frankenbot, necessary steps have been mentioned below unde
 % \ref{par:config} in Frankenbot's Framework.
  
 \subsubsection*{Training for RASA NLU}
-It has been used for natural language understanding in Frankenbot. It needs to get trained first in order to produce some useful results and for that purpose one needs to provide it with the training data. It can be provided using different formats as mentioned on its website \cite{rasatrainingdata}. For Frankenbot, json format has been adopted but it can be changed without any issue based upon the developer preference. This format consists of a top-level object called rasa\_nlu\_data, with the keys common\_examples, entity\_synonyms and regex\_features. The most important one out of these all is common\_examples.
+It has been used for natural language understanding in Frankenbot. It needs to get trained first in order to produce some useful results and for that purpose one needs to provide it with the training data. It can be provided using different formats as mentioned on its website \cite{rasatrainingdata}. For Frankenbot, json format has been adopted but it can be changed without any issue based upon the developer preferences. This format consists of a top-level object called rasa\_nlu\_data, with the keys common\_examples, entity\_synonyms and regex\_features. The most important one out of these all is common\_examples.
 
 \begin{lstlisting}[language=json,firstnumber=1]
 {
@@ -423,7 +421,7 @@ Coming towards internal processing, the user utterance is passed to the trained 
 \end{figure}
 
 \subparagraph*{Response Generation}
-As the name itself is self explanatory that what task should it perform. Response generator is liable for producing a response taking in to account an identified intent. Additionally, it is also responsible for appending chatbot response to the final json object designed to be returned as an api output. 
+As the name itself is self explanatory that what task should it perform. Response generator is liable for producing a response by taking an identified intent in to the account. Additionally, it is also responsible for appending chatbot response to the final json object designed to be returned as an api output. 
 \\~\\
 It is compulsory for the precedent classes to take in to account both of the functionalities that parent abstract class is responsible for. Simple response generator does it all for Frankenbot. As it needs mode for a response that can be sequential or random and a list of responses for a captured intent for response selection.
 \\~\\
@@ -431,7 +429,7 @@ Once the pre-processing has been completed, means all the steps have been finish
 \\~\\
 Its graphical representation is shown in Figure \ref{fig:flowRespGen} below. Firstly, it checks for the intent's sequential response counter for a specific user and updates it accordingly for next time usage. Secondly, after selection of a response, it checks within a response for entities and context variables. If there is any detected entity for a user utterance and a response needs to be exchanged with its value then it should be handled here. Also, if there is any context variable stored previously for a user and bot's reply needs to get modified with its value then it should also be done here. After all processing has been accomplished, it should create a json object with a chatbot response for api output and send it back to a bot component for performing next required executions. 
 
-\begin{figure}[!h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{img/Response_generator.pdf}
     \caption{Flow chart to generate response }
