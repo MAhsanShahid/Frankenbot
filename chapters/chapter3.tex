@@ -135,13 +135,13 @@ The same dialogue graph with a traditional dialogue tree is shown in Figure \ref
     \centering
    \begin{tabular}{ |c|c|c|c| } 
         \hline
-         & No. of Nodes & No. of Transitions \\
+         & \textbf{No. of Nodes} & \textbf{No. of Transitions} \\
         \hline
         \row{Traditional} & 21 & 26 \\ 
         \row{Frankenbot} & 15 & 14 \\ 
         \hline
     \end{tabular}
-    \caption{Traditional vs. Frankenbot in terms of nodes and transitions}
+    \caption{Traditional vs. Frankenbot in terms of nodes and transitions.}
     \label{tab:tradVsFran}
 \end{table}
 
@@ -187,9 +187,9 @@ For utilizing it in a Frankenbot, necessary steps have been mentioned below unde
 % \ref{par:config} in Frankenbot's Framework.
  
 \subsubsection*{Training for RASA NLU}
-It has been used for natural language understanding in Frankenbot. It needs to get trained first to produce some useful results and for that purpose, one needs to provide it with the training data. It can be provided using different formats as mentioned on its website \cite{rasatrainingdata}. For Frankenbot, JSON format has been adopted but it can be changed without any issue based upon the developer preferences. This format consists of a top-level object called rasa\_nlu\_data, with the keys common\_examples, entity\_synonyms, and regex\_features. The most important one out of these all is common\_examples.
+It has been used for natural language understanding in Frankenbot. It needs to get trained first to produce some useful results and for that purpose, one needs to provide it with the training data. It can be provided using different formats as mentioned on its website \cite{rasatrainingdata}. For Frankenbot, JSON format has been adopted but it can be changed without any issue based upon the developer preferences. The format listed in Listing \ref{lst:rasaJson} consists of a top-level object called rasa\_nlu\_data, with the keys common\_examples, entity\_synonyms, and regex\_features. The most important one out of these all is common\_examples.
 
-\begin{lstlisting}[language=json,firstnumber=1]
+\begin{lstlisting}[language=json,firstnumber=1, caption=RASA NLU Training Data JSON Format., label={lst:rasaJson}]
 {
     "rasa_nlu_data": {
         "common_examples": [],
@@ -199,9 +199,11 @@ It has been used for natural language understanding in Frankenbot. It needs to g
     }
 }
 \end{lstlisting}
- Moreover, common\_examples are a list of objects with the keys text, intent, and entities. Whereas, entities can be an empty list or the objects list with the keys start, end, value, and entity.
+\\~\\
+Moreover, common\_examples are a list of objects with the keys text, intent, and entities as shown in Listing \ref{lst:commonExampJson}. Whereas, entities can be an empty list or the objects list with the keys start, end, value, and entity.
  
- \begin{lstlisting}[language=json,firstnumber=1]
+ \begin{minipage}{\linewidth}
+\begin{lstlisting}[language=json,firstnumber=1, caption=JSON Objects for common\_examples., label={lst:commonExampJson}]
 {
     "text": "...",
     "intent": "#...",
@@ -216,6 +218,7 @@ It has been used for natural language understanding in Frankenbot. It needs to g
     ]
 }
 \end{lstlisting}
+\end{minipage}
 
 \subsection{Frankenbot Framework}
 This framework is composed of various components. Each of which is responsible for performing a specific task. It has been majorly divided into the following two divisions: (i) The web server(backend), which is responsible for the creation of the whole chatbot and producing desired responses for a user and (ii) A client(frontend) also known as a user interface to interact with a chatbot. Both of these are explicitly explained below.
@@ -234,7 +237,7 @@ It is implemented using simple JavaScript, Html, and CSS. The template can be fo
 \\~\\
 Furthermore, it is also responsible for storing the user's session id to storage on a browser. For that purpose browser's "localStorage" \cite{localstorage} is used. If the user is connected to the first time to the server then it requests an empty session id and user utterance to the server. And as a response chatbot sends a welcome message and assigns an id to a user. Which is saved in the browsers local storage for every user. Whenever there comes a new request from this user to a server, the session id is being sent along with a user utterance to a server. In return, the server responds with a suitable response according to the user utterance which is being displayed next to the last user utterance. The response from the server is in the form of a JSON object which is being parsed to extract the chatbot's reply and displayed for a user. The important point to take into account is that the user id will be stored until the page is not reloaded or closed. If you want to restart your session and get away with all your previous chat, then you can simply refresh the web page and it will make a new instance of the chatbot. But for the future, a server will have the record of all dialogues that happened in a past stored in a database. 
 \\~\\
-For better understanding graphical representation for an interface is shown in Figure \ref{fig: userInter}.
+For better understanding the graphical representation of an interface is displayed in Figure \ref{fig:userInter}.
 
 \begin{figure}[!h]
     \centering
@@ -243,7 +246,7 @@ For better understanding graphical representation for an interface is shown in F
     \label{fig:userInter}
 \end{figure}
 \\~\\
-As demonstrated, the left side of the screen contains important information and instructions for a new user. Whilst, on its right, there exists a chatbox showing the first most message as a welcome message for the newly arrived user. After that the chat between the user and a bot initiated. The user can type a message in the bottom-most text box and press sends button or enter button from keyboard. The user's message will be displayed on the left side of the screen while the response will be shown on the right side of the screen's display and vice-versa according to your viewpoint.
+As demonstrated, the left side of the screen contains important information and instructions for a new user. Whilst, on its right, there exists a chat window showing the first most message as a welcome message for the newly arrived user. After that chat between the user and a bot initiated. The user can type a message in the bottom-most text box and press sends button or enter button from keyboard. The user's message will be displayed on the left side of the screen while the response will be shown on the right side of the screen's display and vice-versa according to your viewpoint.
 
 \subsubsection*{Web Server}
 The web server itself is a composite of multiple classes performing specific tasks and connected to a client using web API. It is written in Python version 3. Abstractly, it is responsible for performing all tasks required to make a chatbot functioning. Firstly it receives user utterance as a parameter and initializes a chatbot from data provided as a source file of the JSON format. After initializing a chatbot, it undergoes various actions for a user utterance to generate a response.
@@ -264,10 +267,11 @@ Important tasks performed by the web API are:
 \subparagraph*{Persistence}
 Persistence includes the Json Unseralizer. It takes the JSON file as an input and parses it for generating an initial chatbot.
 \\~\\
-The JSON file contains data as a JSON dictionary object which includes the name of a bot, welcome message, fallback message in case of no response, and a dialogue manager. Inside a dialogue manager, there exists a list of modules consisting of several modules having unique module ids. Additionally, each module contains a dialogue tree having a list of tree nodes. Whereas, each tree node includes a unique node id, information about its parent node, name of intent to which it belongs, and respective response generator. Furthermore, a response generator includes a mode for the responses that can be sequential or random and a list of responses. And all of the above-mentioned elements are uniquely identified using a key "type". For better understanding, just have a look at a JSON sample shown below:
-\\~\\
+The JSON file contains data as a JSON dictionary object which includes the name of a bot, welcome message, fallback message in case of no response, and a dialogue manager. Inside a dialogue manager, there exists a list of modules consisting of several modules having unique module ids. Additionally, each module contains a dialogue tree having a list of tree nodes. Whereas, each tree node includes a unique node id, information about its parent node, name of intent to which it belongs, and respective response generator. Furthermore, a response generator includes a mode for the responses that can be sequential or random and a list of responses. And all of the above-mentioned elements are uniquely identified using a key "type". For better understanding, just have a look at a JSON sample shown below in Listing \ref{lst:botJson}.
 % caption=A first example
-\begin{lstlisting}[language=json, firstnumber=1, label={lst:botJson}]
+
+\begin{minipage}{\linewidth}
+\begin{lstlisting}[language=JSON, firstnumber=1, caption=Frankenbot's JSON Structure., label={lst:botJson}]
 {
   "type": "bot",
   "name": "...",
@@ -302,6 +306,7 @@ The JSON file contains data as a JSON dictionary object which includes the name 
   }
 }
 \end{lstlisting}
+\end{minipage}
 \\~\\
 Theoretically, a bot is composed of a dialogue manager that contains information about all the modules representing the entire dialogue structure. Moreover, a module includes a dialogue tree that has been developed to design a dialogue. Each dialogue tree is made up of the relational tree nodes. And each tree node holds all the technical information about the intent and other required fields for a dialogue to produce the respected response.
 \\~\\
@@ -321,14 +326,14 @@ Also, there is a convention used to represent the intents, entities, and context
     \centering
    \begin{tabular}{ |c|c|c|c| } 
         \hline
-         & Key & Value \\
+         & \textbf{Key} & \textbf{Value} \\
         \hline
         \row{Intent} & {\#intent\_name} & {intent\_value} \\ 
         \row{Entity} & {@entity\_name} & {entity\_value} \\
-        \row{Context Var.} & {\$context\_var\_name} & {context\_var\_value} \\
+        \row{Context Variable} & {\$context\_var\_name} & {context\_var\_value} \\
         \hline
     \end{tabular}
-    \caption{Representation for an Intent, Entity and Context Variable}
+    \caption{Representation for an Intent, Entity and Context Variable.}
     \label{tab:repIntEntCont}
 \end{table}
 
@@ -346,7 +351,7 @@ Another important attribute available is the response sequential counter. Its ma
 To make chatbot work it is really important to provide it with proper configurations. Frankenbot needs three following directories to function:
 \begin{enumerate}
     \item bot directory; It should be provided with the bot's directory name as a command-line parameter while running the project. For example, the running command in my case is "python app.py detective". In this command "detective" is the name of a directory which should contain JSON file for initializing a bot. And it should be named "frankenbot.json" (see Appendix \ref{appen:frankJson} to have a look at actual JSON data used for the structuring of the Frankenbot). 
-    \item Furthermore, the bot directory must contain training data directory named as "rasa". Firstly, this sub-directory must contain a configuration file named as "config\_spacy.yaml" defining pipelines required for Rasa NLU Training\cite{rasapipeline} (see Appendix \ref{appen:rasaConf} to have a look on actual pipelines used). Secondly, JSON files must be available with training data for each module in "frankenbot.json". And the names for those training files should be the same as module id assigned to a module for which it contains training data. For example, "frankenbot.json" contains two modules, and ids assigned to them are detective\_tree and general\_tree. So, the training files should be named "detective\_tree.json" and "general\_tree.json" (see Appendix \ref{appen:trainDF} to have a look at actual JSON training data used for both training of modules in the Frankenbot).
+    \item Furthermore, the bot directory must contain training data directory named as "rasa". Firstly, this sub-directory must contain a configuration file named as "config\_spacy.yaml" defining pipelines required for Rasa NLU Training\cite{rasapipeline} (see Appendix \ref{appen:rasaConf} to have a look on actual pipelines used). Secondly, JSON files must be available with training data for each module in "frankenbot.json". And the names for those training files should be the same as module id assigned to a module for which it contains training data. For example, "frankenbot.json" contains two modules, and ids assigned to them are detective\_tree and general\_tree. So, the training files should be named "detective\_tree.json" and "general\_tree.json" (see Appendix \ref{appen:traindatastats} to have a look at actual JSON training data used for both training of modules in the Frankenbot).
     \item Lastly, the model directory is required to store the rasa models produced after the model gets trained for each module. It can be any directory but one has to provide an appropriate path to it.
 \end{enumerate} 
 
@@ -366,8 +371,8 @@ Alternatively, if it is above the threshold then the highest module received fro
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=0.6\textwidth]{img/bot.pdf}
-    \caption{Flow chart for the bot's say function}
+    \includegraphics[width=0.9\textwidth]{img/bot_updated.pdf}
+    \caption{Flow chart to finalize and update JSON output.}
     \label{fig:flowBot}
 \end{figure}
 
@@ -386,8 +391,8 @@ In the end, it also checks for identified entities and their activation values a
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=0.7\textwidth]{img/Dialogue_manager.pdf}
-    \caption{Flow chart for the dialogue manager's find node module function}
+    \includegraphics[width=0.9\textwidth]{img/Dialogue_manager_updated.pdf}
+    \caption{Flow chart to find module with highest activation value.}
     \label{fig:flowDialogueMan}
 \end{figure}
 
@@ -400,7 +405,7 @@ Starting with an activation function is graphically represented in Figure \ref{f
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.9\textwidth]{img/module.pdf}
-    \caption{Flow chart for the module's activation function}
+    \caption{Flow chart for the module's activation function.}
     \label{fig:flowModule}
 \end{figure}
 \\~\\
@@ -416,7 +421,7 @@ Coming towards internal processing, the user utterance is passed to the trained 
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.9\textwidth]{img/Intent_entity_detector.pdf}
-    \caption{Flow chart for the Rasa Intent and Entity Detector}
+    \caption{Flow chart for the Rasa Intent and Entity Detector.}
     \label{fig:flowIntandEnt}
 \end{figure}
 
@@ -432,14 +437,15 @@ Its graphical representation is shown in Figure \ref{fig:flowRespGen} below. Fir
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{img/Response_generator.pdf}
-    \caption{Flow chart to generate response }
+    \caption{Flow chart for response generation.}
     \label{fig:flowRespGen}
 \end{figure}
 
 \subparagraph*{JSON API Output}
-After all components are done with their part, bot returns a JSON object to web API which passes it further to a client which is parsed at the client side for displaying needed information for a user. Let's start with an observation of JSON object demonstrated below:
+After all components are done with their part, bot returns a JSON object to web API which passes it further to a client which is parsed at the client side for displaying needed information for a user. Let's start with an observation of JSON object demonstrated below in Listing \ref{lst:outputJson}.
 
-\begin{lstlisting}[language=json, firstnumber=1]
+\begin{minipage}{\linewidth}
+\begin{lstlisting}[language=JSON, firstnumber=1, caption=Frankenbot's API JSON Output., label={lst:outputJson}]
 {
     "user_utterance": {
         "text": "..."
@@ -478,6 +484,7 @@ After all components are done with their part, bot returns a JSON object to web 
     ]
 }
 \end{lstlisting}
+\end{minipage}
 The JSON object contains user\_utterance which holds a key text for the user's message as a value. Secondly, chatbot\_utterance's response is a final reply by a chatbot. An active\_module reflects an id of the recognized module, activation\_value in terms of rasa's confidence value for an identified intent. Whereas, its child module\_output depicts an encountered intent and detected entities. Finally, modules\_output involves the dictionary object for all modules in a chatbot through which user utterance has been processed to generate a response after intent detection. So, id shows an id of a module, activation\_value is same just like as mentioned before for active\_module. Furthermore, module\_output is also similar to active\_module's module\_output but with an additional key for intent\_ranking. It is comprised of all the names for the intents and their respective confidence values obtained from rasa's trained natural language interpreter.
 
 \subparagraph*{Logging}

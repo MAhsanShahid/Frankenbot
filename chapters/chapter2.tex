@@ -90,14 +90,34 @@ Mainly natural language understanding is done using statistical models. On the o
 \\~\\
 Modern task-oriented dialogue systems are based upon the following architectures:
 \subsubsection*{Frame-based Architecture}
-Jurafsky and Martin (2019) narrates that state-of-the-art task-oriented dialogue systems are composed of frames. The information extracted from the user utterances by the system to identify the intentions of the user is stored in the form of a knowledge structure which is known as a frame. The slot could be a key-value pair of some specific type and a frame is composed of a group of such slots. These slots indicate what information is required by the system. Once these slots get filled then the system can perform some action accordingly \cite{dialogsysandchatbots}. Example of a frame along with the slots and their types and question to fill each slot has been shown in Figure \ref{fig:frame}.
+Jurafsky and Martin (2019) narrates that state-of-the-art task-oriented dialogue systems are composed of frames. The information extracted from the user utterances by the system to identify the intentions of the user is stored in the form of a knowledge structure which is known as a frame. The slot could be a key-value pair of some specific type and a frame is composed of a group of such slots. These slots indicate what information is required by the system. Once these slots get filled then the system can perform some action accordingly \cite{dialogsysandchatbots}. Example of a frame along with the slots and their types and question to fill each slot has been shown in Table \ref{tab:frame}.
 
-\begin{figure}[h]
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{img/frame.PNG}
+%     \caption{A frame showing each slot along with its type and related question. \cite{dialogsysandchatbots}}
+%     \label{fig:frame}
+% \end{figure}
+
+\begin{table}[!h]
     \centering
-    \includegraphics[width=0.9\textwidth]{img/frame.PNG}
-    \caption{A frame showing each slot along with its type and related question. \cite{dialogsysandchatbots}}
-    \label{fig:frame}
-\end{figure}
+   \begin{tabular}{ |c|c|c|c| } 
+        \hline
+         \textbf{Slot} & \textbf{Type} & \textbf{Question Template} \\
+        \hline
+        \row{ORIGIN CITY} & {city} & {"From what city are you leaving?"} \\ 
+        \row{DESTINATION CITY} & {city} & {"Where are you going?"} \\
+        \hline
+        \row{DEPARTURE TIME} & {time} & {"When would you like to leave?"} \\
+        \row{DEPARTURE DATE} & {date} & {"What day would you like to leave?"} \\
+        \hline
+        \row{ARRIVAL TIME} & {time} & {"When do you want to arrive?"} \\
+        \row{ARRIVAL DATE} & {date} & {"What day would you like to arrive?"} \\
+        \hline
+    \end{tabular}
+    \caption{A frame showing each slot along with its type and related question \cite{dialogsysandchatbots}.}
+    \label{tab:frame}
+\end{table}
 
 \subsubsection*{Dialogue-state Architecture}
 It is the most refined form of frame-based architecture. It is also named as belief-state architecture \cite{dialogsysandchatbots}. Whenever there comes a new user utterance, the NLU component extracts the required knowledge to fill the related slots. Secondly, the dialogue manager includes dialogue state tracker which is responsible for tracking and handling the entire dialogue information and values for each slot of a frame. Whereas, the policy learning component is responsible for deciding on the further action that the system should perform or convey. Once the dialogue policy confirms that what action should be taken by the system according to the updated dialogue state. Afterward, Natural Language Generation(NLG) component takes an action to produce the textual response for the users \cite{surveyondialogsystems}. Graphical representation of such architecture is shown in Figure \ref{fig:dms}.    
@@ -221,14 +241,37 @@ It is an essential chatbot element. NLP is a technical process for a better unde
 % \subsubsection*{Deep Learning Techniques}
 % In this section some commonly used deep learning will be explained that are used for Natural Language Processing(NLP). Word Embedding and Recurrent Neural Networks are frequently used techniques for deep learning \cite{deepLearnBasedNLP}. Furthermore, Intent classification can be done using a variety of techniques that vary from Simple Keyword Extraction to Bayesian Inference. Afterward, the response can be generated using previously discussed retrieval-based and generative-based methods.
 \subsubsection*{Dialogue Act Detection}
-Determining the function of the text whether it is a question, command, suggestion or an offer is known as dialogue act detection. It is one way of deriving semantics from natural language \cite{ciTalktosmartdev}\cite{archDesDev}. For a better understanding of it, an example has been shown in Figure \ref{fig:dade}.
+Determining the function of the text whether it is a question, command, suggestion or an offer is known as dialogue act detection. It is one way of deriving semantics from natural language \cite{ciTalktosmartdev}\cite{archDesDev}. For a better understanding of it, an example has been shown in Table \ref{tab:dade}.
 
-\begin{figure}[h]
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.9\textwidth]{img/Dialogue_Act.PNG}
+%     \caption{Dialogue act detection example \cite{archDesDev}.}
+%     \label{fig:dade}
+% \end{figure}
+
+\begin{table}[!h]
     \centering
-    \includegraphics[width=0.9\textwidth]{img/Dialogue_Act.PNG}
+   \begin{tabular}{ |c|c|c|c| } 
+        \hline
+         \textbf{Speaker} & \textbf{Dialogue Act} & \textbf{English} \\
+        \hline
+        \row{A} & {Conventional-opening} & {Hello!?} \\
+        \hline
+        \row{B} & {Conventional-opening} & {Hi Peter!} \\
+        \row{B} & {Statement} & {It's me, Michael.} \\
+        \row{B} & {Question} & {How are you?} \\
+        \hline
+        \row{A} & {Conventional-opening} & {Hello Michael!} \\
+        \row{A} & {Statement} & {Very well.} \\
+        \row{A} & {Question} & {And you?} \\
+        \hline
+        \row{B} & {Statement} & {I'm well too.} \\
+        \hline
+    \end{tabular}
     \caption{Dialogue act detection example \cite{archDesDev}.}
-    \label{fig:dade}
-\end{figure}
+    \label{tab:dade}
+\end{table}
 
 \subsubsection*{Intent and Entity Classification}
 It is another way of understanding the meaning of the text represented in the form of natural language. Domain-specific dialogue acts are known as intents. An intent represents the user's real intention and goal of what he/she is trying to convey. Whereas, entities are modifiers for an intent. Entities could also be referred to as slots. Based on the detected intent the user can be directed further to available dialogue options \cite{sluSys}. 
