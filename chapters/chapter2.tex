@@ -66,7 +66,6 @@ The importance of human-computer interaction has raised drastically in the last 
 These systems are designed to accomplish a task in some specific domain. The system interprets a message provided by the user, symbolizes it to the internal state, and processes it according to the state of the dialogue. Lastly, the final action is performed on it to produce a response \cite{surveyondialogsystems}. Common examples of such virtual agents are Apple's Siri, Google Home, and Amazon's Alexa.
 \\~\\
 Mainly natural language understanding is done using statistical models. On the other hand, some systems still use human-designed pre-defined rules for slot filling and detecting an intent \cite{surveyondialogsystems}. It not only results in more time consumption and makes deployment of such system costly, but also restricts the operational domain for the system. To overcome these challenges, deep learning played an important role.
-
 % \subsubsection*{Pipeline Methods \label{sec:pipelineMethods}}
 % As mentioned in \cite{surveyondialogsystems} Task-oriented systems consisting of pipeline methods inherit following four major components:
 % \begin{itemize}
@@ -91,28 +90,26 @@ Mainly natural language understanding is done using statistical models. On the o
 Modern task-oriented dialogue systems are based upon the following architectures:
 \subsubsection*{Frame-based Architecture}
 Jurafsky and Martin (2019) narrates that state-of-the-art task-oriented dialogue systems are composed of frames. The information extracted from the user utterances by the system to identify the intentions of the user is stored in the form of a knowledge structure which is known as a frame. The slot could be a key-value pair of some specific type and a frame is composed of a group of such slots. These slots indicate what information is required by the system. Once these slots get filled then the system can perform some action accordingly \cite{dialogsysandchatbots}. Example of a frame along with the slots and their types and question to fill each slot has been shown in Table \ref{tab:frame}.
-
 % \begin{figure}[h]
 %     \centering
 %     \includegraphics[width=0.9\textwidth]{img/frame.PNG}
 %     \caption{A frame showing each slot along with its type and related question. \cite{dialogsysandchatbots}}
 %     \label{fig:frame}
 % \end{figure}
-
 \begin{table}[!h]
     \centering
    \begin{tabular}{ |c|c|c|c| } 
         \hline
          \textbf{Slot} & \textbf{Type} & \textbf{Question Template} \\
         \hline
-        \row{ORIGIN CITY} & {city} & {"From what city are you leaving?"} \\ 
-        \row{DESTINATION CITY} & {city} & {"Where are you going?"} \\
+        \row {ORIGIN CITY} & {city} & {"From what city are you leaving?"} \\ 
+        \row {DESTINATION CITY} & {city} & {"Where are you going?"} \\
         \hline
-        \row{DEPARTURE TIME} & {time} & {"When would you like to leave?"} \\
-        \row{DEPARTURE DATE} & {date} & {"What day would you like to leave?"} \\
+        \row {DEPARTURE TIME} & {time} & {"When would you like to leave?"} \\
+        \row {DEPARTURE DATE} & {date} & {"What day would you like to leave?"} \\
         \hline
-        \row{ARRIVAL TIME} & {time} & {"When do you want to arrive?"} \\
-        \row{ARRIVAL DATE} & {date} & {"What day would you like to arrive?"} \\
+        \row {ARRIVAL TIME} & {time} & {"When do you want to arrive?"} \\
+        \row {ARRIVAL DATE} & {date} & {"What day would you like to arrive?"} \\
         \hline
     \end{tabular}
     \caption{A frame showing each slot along with its type and related question \cite{dialogsysandchatbots}.}
@@ -324,7 +321,7 @@ These methods consist of a humongous database containing successive responses. C
     \caption{Retrieval-based Methods Example \cite{designandimplementation}}
     \label{fig:rbm}
 \end{figure}
-\\~\\
+\noindent
 The primary and fundamental step to achieve the retrieval-based method is message and response matching \cite{surveyondialogsystems}. The basic purpose of matching algorithms is to minimize the semantics difference between the responses and the messages \cite{surveyondialogsystems}. Two such techniques are mentioned below:
 % \subparagraph*{Single Turn Response Matching}
 \paragraph*{Single Turn Response Matching}
@@ -770,6 +767,6 @@ As shown in Figure \ref{fig:attrakMod} that attractiveness is based upon pragmat
     \caption{Main Concept of the AttrakDiff's Model \cite{inflOfHedandPrag}.}
     \label{fig:attrakMod}
 \end{figure}
-\\~\\
+\noindent
 The next chapter illustrates the system architecture and overview of the chatbot named as "Frankenbot" along with its capabilities.
 

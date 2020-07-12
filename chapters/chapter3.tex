@@ -47,8 +47,9 @@ The Frankenbot is a chatbot composed of multiple chatbots. The design composes m
     \caption{Frankenbot Overview}
     \label{fig:frankOver}
 \end{figure}
-\\~\\
-As displayed, the example is composed of two modules: (i) "Dialogues Greetings and Small Talk" and (ii) "Question Answering System". And each module includes a dialogue tree demonstrating a complete dialogue structure for the respective module. So, "Dialogue Tree #1" belongs to the greetings module, and "Dialogue Tree #2" is linked with the Q\&A module. The module and dialogue tree has been explained in the section below.
+
+\noindent
+As displayed, the example is composed of two modules: (i) "Dialogues Greetings and Small Talk" and (ii) "Question Answering System". And each module includes a dialogue tree demonstrating a complete dialogue structure for the respective module. So, "Dialogue Tree \#1" belongs to the greetings module, and "Dialogue Tree \#2" is linked with the Q\&A module. The module and dialogue tree has been explained in the section below.
 
 \subsection{Module}
 A module can provide the answer to a user's utterance. Therefore it requires an activation function Z that maps the current user utterance and the system state to a real number.
@@ -64,7 +65,7 @@ For every user utterance, the dialogue manager calls all activation functions an
 \item Question and Answering Dialogue \cite{q&aDialog}.
 \item Knowledge Graph \cite{knowlGraph}.
 \end{itemize}
-\\~\\
+\noindent
 As a theory, a module can be more than a dialogue tree. Other systems (question answering, neural systems, etc.) can also fit in this framework, as long as they implement an activation function but it still needs to be tested. 
 \\~\\
 The classic slot-filler/single dialogue tree-based architecture is a basic possible module of the Frankenbot. Therefore the Frankenbot is at least as powerful as the slot-filler.
@@ -75,7 +76,7 @@ One of the data structures used to represent a dialogue is known as a dialogue o
 \item The transitions from the root node to the sub-tree.
 \item The transitions inside each sub-tree.       
 \item The transitions from each node to the root node(dashed lines: “I want to cancel this dialogue”).
-\item To enable transitions between the sub-trees they would need to be modeled explicitly. In the example, this is omitted due to the complexity of the graph. Also, it is not possible to jump directly to the "subtree #2" while being currently somewhere in "subtree #1". Switching is only possible by following the available path to it.
+\item To enable transitions between the sub-trees they would need to be modeled explicitly. In the example, this is omitted due to the complexity of the graph. Also, it is not possible to jump directly to the "subtree \#2" while being currently somewhere in "subtree \#1". Switching is only possible by following the available path to it.
 \end{itemize} 
 
 \begin{figure}[!h]
@@ -170,7 +171,8 @@ Frankenbot’s system architecture has been sketched in Figure \ref{fig:sysArch}
     \caption{Frankenbot's System Architecture}
     \label{fig:sysArch}
 \end{figure} 
-\\~\\
+
+\noindent
 As it is clear from Figure \ref{fig:sysArch} that the communication between the client and the server is possible only via web API composed of a simple get request. In addition to that when you dig deep into the framework, it is composed of several different components.
 
 \subsection{RASA Framework for NLU \label{subsec:rasanlu}}
@@ -199,7 +201,7 @@ It has been used for natural language understanding in Frankenbot. It needs to g
     }
 }
 \end{lstlisting}
-\\~\\
+\noindent
 Moreover, common\_examples are a list of objects with the keys text, intent, and entities as shown in Listing \ref{lst:commonExampJson}. Whereas, entities can be an empty list or the objects list with the keys start, end, value, and entity.
  
  \begin{minipage}{\linewidth}
@@ -237,7 +239,7 @@ It is implemented using simple JavaScript, Html, and CSS. The template can be fo
 \\~\\
 Furthermore, it is also responsible for storing the user's session id to storage on a browser. For that purpose browser's "localStorage" \cite{localstorage} is used. If the user is connected to the first time to the server then it requests an empty session id and user utterance to the server. And as a response chatbot sends a welcome message and assigns an id to a user. Which is saved in the browsers local storage for every user. Whenever there comes a new request from this user to a server, the session id is being sent along with a user utterance to a server. In return, the server responds with a suitable response according to the user utterance which is being displayed next to the last user utterance. The response from the server is in the form of a JSON object which is being parsed to extract the chatbot's reply and displayed for a user. The important point to take into account is that the user id will be stored until the page is not reloaded or closed. If you want to restart your session and get away with all your previous chat, then you can simply refresh the web page and it will make a new instance of the chatbot. But for the future, a server will have the record of all dialogues that happened in a past stored in a database. 
 \\~\\
-For better understanding the graphical representation of an interface is displayed in Figure \ref{fig:userInter}.
+For better understanding, the graphical representation of an interface is displayed in Figure \ref{fig:userInter}.
 
 \begin{figure}[!h]
     \centering
@@ -245,7 +247,7 @@ For better understanding the graphical representation of an interface is display
     \caption{Frankenbot's User Interface(Client)}
     \label{fig:userInter}
 \end{figure}
-\\~\\
+\noindent
 As demonstrated, the left side of the screen contains important information and instructions for a new user. Whilst, on its right, there exists a chat window showing the first most message as a welcome message for the newly arrived user. After that chat between the user and a bot initiated. The user can type a message in the bottom-most text box and press sends button or enter button from keyboard. The user's message will be displayed on the left side of the screen while the response will be shown on the right side of the screen's display and vice-versa according to your viewpoint.
 
 \subsubsection*{Web Server}
@@ -386,7 +388,7 @@ Responsibility of a dialogue manager not only ends here but it is also responsib
     \item Secondly, if the recently processed node is not a root node then what should be its behavior? It is a bit complex strategy to follow. Firstly, it should check if its parent's activation flag is set or not. If it is set then it should proceed further otherwise it should not. Let's suppose that it is set and it steps ahead and finds multiple nodes with the same intent in its children nodes then it will not respond correctly. As it is the main idea behind the modular architecture that modules can be reused but different modules with the same intents do not need to have the same responses. Responses can differ at different levels in a tree whilst having the same intent. So for removing this problem, an active state for each module has been stored separately. This means if there exist two modules for a chatbot then there should be two separate active states, one for each module, available for a user. So by using these active states, it can match the last active node's id with the current node's parent id and if it is true then it is good to go. Also what if the user starts to enter the same user utterance again and again. It will again cause a problem as it will be searching for intent in the last active node's children but it will not be able to find it. So to overcome this issue, the manager matches the current node's id with the last active node's id and again if this condition has been satisfied then it should respond correctly. 
     \item Lastly, irrespective of the above conditions whether any of them is satisfied or not. It should return to a bot component which is meant to handle all scenarios and responsible to produce an appropriate response if there exists any highest detected module. Otherwise, it uses anything\_else node or fallback message to respond depending upon the state and design of the bot.
 \end{enumerate} 
-\\~\\
+\noindent
 In the end, it also checks for identified entities and their activation values and stores and updates them accordingly. And all the essential information is returned to a bot component. Which is responsible for returning the response to the client via web API and the active state for the current user should be updated beforehand.
 
 \begin{figure}[!h]
@@ -408,7 +410,8 @@ Starting with an activation function is graphically represented in Figure \ref{f
     \caption{Flow chart for the module's activation function.}
     \label{fig:flowModule}
 \end{figure}
-\\~\\
+
+\noindent
 Moreover, it also has been used to generate a response with the help of the response generator for an encountered module with the highest activation based upon the identified intent and entities for a particular user.
 
 \subparagraph*{Intent and Entity Detection}
