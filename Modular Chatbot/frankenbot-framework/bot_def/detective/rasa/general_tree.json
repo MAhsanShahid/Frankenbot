@@ -1,0 +1,1318 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "Hi, I want to talk about general things",
+        "intent": "#general_talk",
+        "entities": []
+      },
+      {
+        "text": "Hi, I want to talk generally",
+        "intent": "#general_talk",
+        "entities": []
+      },
+      {
+        "text": "lets have a general talk",
+        "intent": "#general_talk",
+        "entities": []
+      },
+      {
+        "text": "lets talk about general things",
+        "intent": "#general_talk",
+        "entities": []
+      },
+      {
+        "text": "hi, i want to talk general",
+        "intent": "#general_talk",
+        "entities": []
+      },
+      {
+        "text": "hey i just want to talk general",
+        "intent": "#general_talk",
+        "entities": []
+      },
+      {
+        "text": "hello i just want to talk general",
+        "intent": "#general_talk",
+        "entities": []
+      },
+      {
+        "text": "i just want to talk general",
+        "intent": "#general_talk",
+        "entities": []
+      },
+      {
+        "text": "i just want to talk about general things",
+        "intent": "#general_talk",
+        "entities": []
+      },
+      {
+        "text": "talk general",
+        "intent": "#general_talk",
+        "entities": []
+      },
+      {
+        "text": "general talk",
+        "intent": "#general_talk",
+        "entities": []
+      },
+      {
+        "text": "i just want to talk random",
+        "intent": "#general_talk",
+        "entities": []
+      },
+      {
+        "text": "i just want to talk about random things",
+        "intent": "#general_talk",
+        "entities": []
+      },
+      {
+        "text": "i just want to talk about general stuff",
+        "intent": "#general_talk",
+        "entities": []
+      },
+      {
+        "text": "hi, i just want to talk about random things",
+        "intent": "#general_talk",
+        "entities": []
+      },
+      {
+        "text": "hi, i just want to talk about general stuff",
+        "intent": "#general_talk",
+        "entities": []
+      },
+      {
+        "text": "hi, i just want to talk about random stuff",
+        "intent": "#general_talk",
+        "entities": []
+      },
+      {
+        "text": "talk about general things with me",
+        "intent": "#general_talk",
+        "entities": []
+      },
+      {
+        "text": "talk about general stuff with me",
+        "intent": "#general_talk",
+        "entities": []
+      },
+      {
+        "text": "general",
+        "intent": "#general_talk",
+        "entities": []
+      },
+      {
+        "text": "random talk",
+        "intent": "#general_talk",
+        "entities": []
+      },
+      {
+        "text": "general things",
+        "intent": "#general_talk",
+        "entities": []
+      },
+      {
+        "text": "general stuff",
+        "intent": "#general_talk",
+        "entities": []
+      },
+      {
+        "text": "what is Corona",
+        "intent": "#corona",
+        "entities": []
+      },
+      {
+        "text": "Corona virus",
+        "intent": "#corona",
+        "entities": []
+      },
+      {
+        "text": "corona",
+        "intent": "#corona",
+        "entities": []
+      },
+      {
+        "text": "corona virus",
+        "intent": "#corona",
+        "entities": []
+      },
+      {
+        "text": "covid 19",
+        "intent": "#corona",
+        "entities": []
+      },
+      {
+        "text": "what is covid 19",
+        "intent": "#corona",
+        "entities": []
+      },
+      {
+        "text": "tell me its precautionary measures",
+        "intent": "#corona",
+        "entities": []
+      },
+      {
+        "text": "its precautionary measures",
+        "intent": "#corona",
+        "entities": []
+      },
+      {
+        "text": "tell its precautionary measures",
+        "intent": "#corona",
+        "entities": []
+      },
+      {
+        "text": "precautionary measures",
+        "intent": "#corona",
+        "entities": []
+      },
+      {
+        "text": "precautions for corona",
+        "intent": "#corona",
+        "entities": []
+      },
+      {
+        "text": "precautions for covid 19",
+        "intent": "#corona",
+        "entities": []
+      },
+      {
+        "text": "how can i protect myself from covid 19",
+        "intent": "#corona",
+        "entities": []
+      },
+      {
+        "text": "how can i protect myself from corona",
+        "intent": "#corona",
+        "entities": []
+      },
+      {
+        "text": "how can i protect myself from corona virus",
+        "intent": "#corona",
+        "entities": []
+      },
+      {
+        "text": "how can i be safe from corona virus",
+        "intent": "#corona",
+        "entities": []
+      },
+      {
+        "text": "how can i remain safe from it",
+        "intent": "#corona",
+        "entities": []
+      },
+      {
+        "text": "show me current stats for corona",
+        "intent": "#coronaStats",
+        "entities": []
+      },
+      {
+        "text": "show me current stats for it",
+        "intent": "#coronaStats",
+        "entities": []
+      },
+      {
+        "text": "show me current results for it",
+        "intent": "#coronaStats",
+        "entities": []
+      },
+      {
+        "text": "show me recent stats for corona",
+        "intent": "#coronaStats",
+        "entities": []
+      },
+      {
+        "text": "current stats for corona",
+        "intent": "#coronaStats",
+        "entities": []
+      },
+      {
+        "text": "current stats of it",
+        "intent": "#coronaStats",
+        "entities": []
+      },
+      {
+        "text": "recent results for corona",
+        "intent": "#coronaStats",
+        "entities": []
+      },
+      {
+        "text": "recent results for it",
+        "intent": "#coronaStats",
+        "entities": []
+      },
+      {
+        "text": "recent cases for corona",
+        "intent": "#coronaStats",
+        "entities": []
+      },
+      {
+        "text": "current cases for it",
+        "intent": "#coronaStats",
+        "entities": []
+      },
+      {
+        "text": "total cases for corona",
+        "intent": "#coronaStats",
+        "entities": []
+      },
+      {
+        "text": "total cases for it",
+        "intent": "#coronaStats",
+        "entities": []
+      },
+      {
+        "text": "what is your name",
+        "intent": "#botProfile",
+        "entities": []
+      },
+      {
+        "text": "tell me your name",
+        "intent": "#botProfile",
+        "entities": []
+      },
+      {
+        "text": "name",
+        "intent": "#botProfile",
+        "entities": []
+      },
+      {
+        "text": "who are you?",
+        "intent": "#botProfile",
+        "entities": []
+      },
+      {
+        "text": "who are you",
+        "intent": "#botProfile",
+        "entities": []
+      },
+      {
+        "text": "what do you like to do",
+        "intent": "#botProfile",
+        "entities": []
+      },
+      {
+        "text": "what are your interests",
+        "intent": "#botProfile",
+        "entities": []
+      },
+      {
+        "text": "what are your favorite subjects",
+        "intent": "#botProfile",
+        "entities": []
+      },
+      {
+        "text": "what is your number",
+        "intent": "#botProfile",
+        "entities": []
+      },
+      {
+        "text": "what is your favorite number",
+        "intent": "#botProfile",
+        "entities": []
+      },
+      {
+        "text": "what is your location",
+        "intent": "#botProfile",
+        "entities": []
+      },
+      {
+        "text": "where are you from",
+        "intent": "#botProfile",
+        "entities": []
+      },
+      {
+        "text": "where are you",
+        "intent": "#botProfile",
+        "entities": []
+      },
+      {
+        "text": "do you have any brothers",
+        "intent": "#botProfile",
+        "entities": []
+      },
+      {
+        "text": "who is your father",
+        "intent": "#botProfile",
+        "entities": []
+      },
+      {
+        "text": "who is your mother",
+        "intent": "#botProfile",
+        "entities": []
+      },
+      {
+        "text": "who is your boss",
+        "intent": "#botProfile",
+        "entities": []
+      },
+      {
+        "text": "what is your age",
+        "intent": "#botProfile",
+        "entities": []
+      },
+      {
+        "text": "you are arrogant",
+        "intent": "#emotion",
+        "entities": [
+           {
+            "start": 8,
+            "end": 16,
+            "value": "arrogant",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "you are bragging",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 8,
+            "end": 16,
+            "value": "bragging",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "you are never sad",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 14,
+            "end": 17,
+            "value": "sad",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "you are jealous",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "jealous",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "you are never nice",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 14,
+            "end": 18,
+            "value": "nice",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "you will be happy",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 12,
+            "end": 17,
+            "value": "happy",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "you should be ashamed",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 14,
+            "end": 21,
+            "value": "ashamed",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "you can not feel",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 12,
+            "end": 16,
+            "value": "feel",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "you can not experience",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 12,
+            "end": 22,
+            "value": "experience",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "have you ever love",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 14,
+            "end": 18,
+            "value": "love",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "does that make you",
+        "intent": "#emotion",
+        "entities": []
+      },
+      {
+        "text": "does it make you sad",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 17,
+            "end": 20,
+            "value": "sad",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "feelings",
+        "intent": "#emotion",
+        "entities": []
+      },
+      {
+        "text": "what is your fear",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 13,
+            "end": 17,
+            "value": "fear",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "what is your mood",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 13,
+            "end": 17,
+            "value": "mood",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "what makes you sad",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 15,
+            "end": 18,
+            "value": "sad",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "what makes you unhappy",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 15,
+            "end": 22,
+            "value": "unhappy",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "what makes you mad",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 15,
+            "end": 18,
+            "value": "mad",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "what do you worry",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 12,
+            "end": 17,
+            "value": "worry",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "what do you hate",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 12,
+            "end": 16,
+            "value": "hate",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "have emotions",
+        "intent": "#emotion",
+        "entities": []
+      },
+      {
+        "text": "are you afraid",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 8,
+            "end": 14,
+            "value": "afraid",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "how angry",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 4,
+            "end": 9,
+            "value": "angry",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "how can i offend you",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 10,
+            "end": 16,
+            "value": "offend",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "do not worry",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 7,
+            "end": 12,
+            "value": "worry",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "do not lie",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 7,
+            "end": 10,
+            "value": "lie",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "do you feel scared",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 12,
+            "end": 18,
+            "value": "scared",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "do you feel",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 7,
+            "end": 11,
+            "value": "feel",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "do you feel pain",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 12,
+            "end": 16,
+            "value": "pain",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "do you ever get mad",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 16,
+            "end": 19,
+            "value": "mad",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "do you ever get lonely",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 16,
+            "end": 22,
+            "value": "lonely",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "do you ever get bored",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 16,
+            "end": 21,
+            "value": "bored",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "do you ever get angry",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 16,
+            "end": 21,
+            "value": "angry",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "do you hate anyone",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 7,
+            "end": 11,
+            "value": "hate",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "do you get embarrassed",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 11,
+            "end": 22,
+            "value": "embarrassed",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "do you get mad",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 11,
+            "end": 14,
+            "value": "mad",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "tell me about relationships",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 14,
+            "end": 27,
+            "value": "relationships",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "tell me about your dreams",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 19,
+            "end": 25,
+            "value": "dreams",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "are you ashamed",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "lonely",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "the feeling",
+        "intent": "#emotion",
+        "entities": []
+      },
+      {
+        "text": "are you intoxicated",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 8,
+            "end": 19,
+            "value": "intoxicated",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "are you jealous",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "jealous",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "are you amused",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 8,
+            "end": 14,
+            "value": "amused",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "are you glad",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 8,
+            "end": 12,
+            "value": "glad",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "are you sad",
+        "intent": "#emotion",
+        "entities": [
+          {
+            "start": 8,
+            "end": 11,
+            "value": "sad",
+            "entity": "@feeling"
+          }
+        ]
+      },
+      {
+        "text": "do you eat",
+        "intent": "#botFood",
+        "entities": []
+      },
+      {
+        "text": "what do you like in food",
+        "intent": "#botFood",
+        "entities": []
+      },
+      {
+        "text": "food",
+        "intent": "#botFood",
+        "entities": []
+      },
+      {
+        "text": "what do you eat and drink",
+        "intent": "#botFood",
+        "entities": []
+      },
+      {
+        "text": "what do you eat",
+        "intent": "#botFood",
+        "entities": []
+      },
+      {
+        "text": "do you eat and drink",
+        "intent": "#botFood",
+        "entities": []
+      },
+      {
+        "text": "what do you like to eat",
+        "intent": "#botFood",
+        "entities": []
+      },
+      {
+        "text": "do you eat",
+        "intent": "#botFood",
+        "entities": []
+      },
+      {
+        "text": "eat and drink",
+        "intent": "#botFood",
+        "entities": []
+      },
+      {
+        "text": "do you drink",
+        "intent": "#botFood",
+        "entities": []
+      },
+      {
+        "text": "do you drink",
+        "intent": "#botFood",
+        "entities": []
+      },
+      {
+        "text": "electricity",
+        "intent": "#botFood",
+        "entities": []
+      },
+      {
+        "text": "are you experiencing an energy shortage?",
+        "intent": "#botFood",
+        "entities": []
+      },
+      {
+        "text": "why can you not eat?",
+        "intent": "#botFood",
+        "entities": []
+      },
+      {
+        "text": "if you could eat food, what would you eat?",
+        "intent": "#botFood",
+        "entities": []
+      },
+      {
+        "text": "do you wish you could eat food?",
+        "intent": "#botFood",
+        "entities": []
+      },
+      {
+        "text": "can a robot get drunk?",
+        "intent": "#botFood",
+        "entities": []
+      },
+      {
+        "text": "i like wine, do you?",
+        "intent": "#botFood",
+        "entities": []
+      },
+      {
+        "text": "what do robots need to survive?",
+        "intent": "#botFood",
+        "entities": []
+      },
+      {
+        "text": "will robots ever be able to eat?",
+        "intent": "#botFood",
+        "entities": []
+      },
+      {
+        "text": "what is good to eat?",
+        "intent": "#botFood",
+        "entities": []
+      },
+      {
+        "text": "why don't you eat",
+        "intent": "#botFood",
+        "entities": []
+      },
+      {
+        "text": "do you eat",
+        "intent": "#botFood",
+        "entities": []
+      },
+      {
+        "text": "do you know gossip",
+        "intent": "#gossip",
+        "entities": []
+      },
+      {
+        "text": "tell me a gossip",
+        "intent": "#gossip",
+        "entities": []
+      },
+      {
+        "text": "lets have a gossip",
+        "intent": "#gossip",
+        "entities": []
+      },
+      {
+        "text": "lets have some gossips",
+        "intent": "#gossip",
+        "entities": []
+      },
+      {
+        "text": "lets do a gossip",
+        "intent": "#gossip",
+        "entities": []
+      },
+      {
+        "text": "have some gossip",
+        "intent": "#gossip",
+        "entities": []
+      },
+      {
+        "text": "a gossip",
+        "intent": "#gossip",
+        "entities": []
+      },
+      {
+        "text": "some gossips",
+        "intent": "#gossip",
+        "entities": []
+      },
+      {
+        "text": "gossipy things",
+        "intent": "#gossip",
+        "entities": []
+      },
+      {
+        "text": "gossipy stuff",
+        "intent": "#gossip",
+        "entities": []
+      },
+      {
+        "text": "lets have a gossip",
+        "intent": "#gossip",
+        "entities": []
+      },
+      {
+        "text": "tell me gossip",
+        "intent": "#gossip",
+        "entities": []
+      },
+      {
+        "text": "gossips",
+        "intent": "#gossip",
+        "entities": []
+      },
+      {
+        "text": "tell gossips",
+        "intent": "#gossip",
+        "entities": []
+      },
+      {
+        "text": "gossip",
+        "intent": "#gossip",
+        "entities": []
+      },
+      {
+        "text": "tell me a joke",
+        "intent": "#humor",
+        "entities": []
+      },
+      {
+        "text": "tell me some jokes",
+        "intent": "#humor",
+        "entities": []
+      },
+      {
+        "text": "do you know any jokes",
+        "intent": "#humor",
+        "entities": []
+      },
+      {
+        "text": "what is humour?",
+        "intent": "#humor",
+        "entities": []
+      },
+      {
+        "text": "joke",
+        "intent": "#humor",
+        "entities": []
+      },
+      {
+        "text": "Joke",
+        "intent": "#humor",
+        "entities": []
+      },
+      {
+        "text": "make me laugh",
+        "intent": "#humor",
+        "entities": []
+      },
+      {
+        "text": "lets be funny",
+        "intent": "#humor",
+        "entities": []
+      },
+      {
+        "text": "lets have some fun",
+        "intent": "#humor",
+        "entities": []
+      },
+      {
+        "text": "have some fun",
+        "intent": "#humor",
+        "entities": []
+      },
+      {
+        "text": "some fun",
+        "intent": "#humor",
+        "entities": []
+      },
+      {
+        "text": "laugh",
+        "intent": "#humor",
+        "entities": []
+      },
+      {
+        "text": "funny",
+        "intent": "#humor",
+        "entities": []
+      },
+      {
+        "text": "tell me anything funny",
+        "intent": "#humor",
+        "entities": []
+      },
+      {
+        "text": "make me smile",
+        "intent": "#humor",
+        "entities": []
+      },
+      {
+        "text": "smile",
+        "intent": "#humor",
+        "entities": []
+      },
+      {
+        "text": "you are cruel",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you are dishonest",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you are not honest",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you are mean",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you are cheating",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you are worst",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you are crazy",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you are psycho",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you are rude",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you are so rude",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "so rude",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you are hopeless",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you are not here to",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you are not smart",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you are not good",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you are not honest",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you are immature",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you are cheater",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you are a bad friend",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you are a bad detective",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you are corrupt",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you are paranoid",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you are confused",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you are damaged",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you get mad at me",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you need a psychiatrist",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you need to work harder",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you make me feel like i am",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you make me mad",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you make me angry",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you do not take this seriously",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you should feel guilty",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you should get more",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you should take more",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you keep saying",
+        "intent": "#psychology",
+        "entities": []
+      },
+      {
+        "text": "you made me mad",
+        "intent": "#psychology",
+        "entities": []
+      }
+    ]
+  }
+}

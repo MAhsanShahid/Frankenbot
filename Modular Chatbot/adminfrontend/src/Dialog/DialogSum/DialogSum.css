@@ -1,0 +1,47 @@
+.DialogElemP{
+    white-space: nowrap;
+    overflow: visible;
+    font-size: x-large;
+  }
+  .DialogElemP2{
+    width:200%;
+    
+  }
+
+  .DialogElem{
+      position:relative;
+      left:4.5%;
+     padding-top: 20px; 
+    
+     
+  }
+  .DialogElemLi{
+      margin-top:20px;
+      list-style-type: none;
+      transition: all 1s;
+      border-radius: 5px;
+      width:300px;
+      height: 100px;
+      padding-left:2%;
+      padding-top:1%;
+      padding-right:none;
+      border: 1px solid rgb(161, 199, 255);
+      
+  }
+  .DialogElemLi:hover{
+      background-color: rgb(161, 199, 255);
+  }
+  .DialogElemA{
+    transition: all 1s;
+    color:black;
+    text-decoration: none; 
+    position:relative;
+     top:-10px;
+     
+  }
+.addIcon{
+  position: absolute;
+  left:230px;
+  height: 27px;
+  width: 27px;
+}

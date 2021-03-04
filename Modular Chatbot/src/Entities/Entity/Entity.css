@@ -1,0 +1,29 @@
+.EntityInput{
+    width: 100%;
+}
+.EntityReposition{
+    position: relative;
+    left:2%;
+}
+.goABitLeftE{
+    position: relative;
+    left:-15%;
+    width: 120%;
+}
+.goABitLeftT{
+    list-style-type: none;
+    position: relative;
+    left:-15%;
+    width: 120%;
+}
+.CustomDropdown{
+    position:relative; 
+    width:100%;
+    top: 12.5px;
+    left: -10px;
+    background-color: white;
+    border-radius: 8px;
+    
+    height:40px;
+    border: 1px solid #678FC9;
+}

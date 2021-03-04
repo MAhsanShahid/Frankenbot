@@ -1,0 +1,105 @@
+{
+  "type": "bot",
+  "name": "Jans Test Bot",
+  "welcome_message": "Hi, I am the test bot.",
+  "fallback_message": "I cant hear you. Can you please speak a bit louder?",
+  "dialog_manager": {
+    "type": "max_activation_dialog_manager",
+    "modules": [
+      {
+        "type": "dialog_tree",
+        "module_id": "greetings",
+        "dialog_tree": [
+          {
+            "type": "tree_node",
+            "node_id": 1,
+            "parent_node": null,
+            "intent_name": "#hello",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "hello",
+                "hi",
+                "hey"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 2,
+            "parent_node": null,
+            "intent_name": "#bye",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "bye",
+                "ciao",
+                "Tschuss"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "dialog_tree",
+        "module_id": "smalltalk",
+        "dialog_tree": [
+          {
+            "type": "tree_node",
+            "node_id": 1,
+            "parent_node": null,
+            "intent_name": "#aboutyou",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "I am Jans test chatbot"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 2,
+            "parent_node": 1,
+            "intent_name": "#wherefrom",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "I was programmed in Jans Home Office during Corona Crisis!"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 5,
+            "parent_node": null,
+            "intent_name": "#iwant",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "you want @food"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 5,
+            "parent_node": null,
+            "intent_name": "#whatiwant",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "you want $food"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

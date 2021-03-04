@@ -1,0 +1,17 @@
+.DialogInput{
+    width: 100%;
+}
+.DialogReposition{
+    position: relative;
+    left:2%;
+}
+.goABitLeft{
+    position: relative;
+    left:-2%;
+}
+/* .customInputField{
+    position: relative;
+    top: 12px;
+    width:100%;
+    left:-5px;
+} */

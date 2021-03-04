@@ -1,0 +1,2327 @@
+{
+    "type": "bot",
+    "name": "Restaurant Assistant",
+    "welcome_message": "Hi, welcome to restaurant assistant (rasa NLU).",
+    "fallback_message": "I did not understand you.",
+    "dialog_manager": {
+        "type": "max_activation_dialog_manager",
+        "modules": [
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": [
+                        "Hi! how can I help you in restaurant search?"
+                    ]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "greet": [
+                            {
+                                "utterance": "hi",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "hey",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "hello",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "good morning",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "howdy",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "hey there",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "good evening",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "dear sir",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "how are you?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "greetings!",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "hi, how is it going?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "how are you doing?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "nice to meet you.",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "how do you do?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "hi, nice to meet you.",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "it is a pleasure to meet you.",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "top of the morning to you!",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what's up?",
+                                "entities": []
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": [
+                        "Good choice, For how many people?"
+                    ]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "restaurant_search": [
+                            {
+                                "utterance": "i'm looking for a place to eat",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "show me some restaurant",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "I want to grab lunch",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "I am searching for a dinner spot",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "i'm looking for a place in the north of town",
+                                "entities": [
+                                    {
+                                        "start": 31,
+                                        "end": 36,
+                                        "value": "north",
+                                        "entity": "location"
+                                    }
+                                ]
+                            },
+                            {
+                                "utterance": "show me chinese restaurants",
+                                "entities": [
+                                    {
+                                        "start": 8,
+                                        "end": 15,
+                                        "value": "chinese",
+                                        "entity": "cuisine"
+                                    }
+                                ]
+                            },
+                            {
+                                "utterance": "show me chenes restaurants in the north",
+                                "entities": [
+                                    {
+                                        "start": 8,
+                                        "end": 14,
+                                        "value": "chinese",
+                                        "entity": "cuisine"
+                                    },
+                                    {
+                                        "start": 34,
+                                        "end": 39,
+                                        "value": "north",
+                                        "entity": "location"
+                                    }
+                                ]
+                            },
+                            {
+                                "utterance": "show me a mexican place in the centre",
+                                "entities": [
+                                    {
+                                        "start": 31,
+                                        "end": 37,
+                                        "value": "centre",
+                                        "entity": "location"
+                                    },
+                                    {
+                                        "start": 10,
+                                        "end": 17,
+                                        "value": "mexican",
+                                        "entity": "cuisine"
+                                    }
+                                ]
+                            },
+                            {
+                                "utterance": "show me chines restaurants in the north",
+                                "entities": [
+                                    {
+                                        "start": 8,
+                                        "end": 14,
+                                        "value": "chinese",
+                                        "entity": "cuisine"
+                                    },
+                                    {
+                                        "start": 34,
+                                        "end": 39,
+                                        "value": "north",
+                                        "entity": "location"
+                                    }
+                                ]
+                            },
+                            {
+                                "utterance": "i am looking for an indian spot called olaolaolaolaolaola",
+                                "entities": [
+                                    {
+                                        "start": 20,
+                                        "end": 26,
+                                        "value": "indian",
+                                        "entity": "cuisine"
+                                    }
+                                ]
+                            },
+                            {
+                                "utterance": "search for restaurants",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "anywhere in the west",
+                                "entities": [
+                                    {
+                                        "start": 16,
+                                        "end": 20,
+                                        "value": "west",
+                                        "entity": "location"
+                                    }
+                                ]
+                            },
+                            {
+                                "utterance": "anywhere near 18328",
+                                "entities": [
+                                    {
+                                        "start": 14,
+                                        "end": 19,
+                                        "value": "18328",
+                                        "entity": "location"
+                                    }
+                                ]
+                            },
+                            {
+                                "utterance": "i am looking for asian fusion food",
+                                "entities": [
+                                    {
+                                        "start": 17,
+                                        "end": 29,
+                                        "value": "asian fusion",
+                                        "entity": "cuisine"
+                                    }
+                                ]
+                            },
+                            {
+                                "utterance": "i am looking a restaurant in 29432",
+                                "entities": [
+                                    {
+                                        "start": 29,
+                                        "end": 34,
+                                        "value": "29432",
+                                        "entity": "location"
+                                    }
+                                ]
+                            },
+                            {
+                                "utterance": "i am looking for mexican indian fusion",
+                                "entities": [
+                                    {
+                                        "start": 17,
+                                        "end": 38,
+                                        "value": "mexican indian fusion",
+                                        "entity": "cuisine"
+                                    }
+                                ]
+                            },
+                            {
+                                "utterance": "restaurant",
+                                "entities": []
+                            },
+                             {
+                                "utterance": "chinese",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "central indian restaurant",
+                                "entities": [
+                                    {
+                                        "start": 0,
+                                        "end": 7,
+                                        "value": "central",
+                                        "entity": "location"
+                                    },
+                                    {
+                                        "start": 8,
+                                        "end": 14,
+                                        "value": "indian",
+                                        "entity": "cuisine"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": [
+                        "Your booking is done successfully! Thanks for trusting me :)"
+                    ]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "booking": [
+                            {
+                                "utterance": "book me a restaurant",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "book it for 5 people",
+                                "entities": [
+                                    {
+                                        "start": 12,
+                                        "end": 20,
+                                        "value": "5 people",
+                                        "entity": "persons"
+                                    }
+                                ]
+                            },
+                            {
+                                "utterance": "book it for three persons",
+                                "entities": [
+                                    {
+                                        "start": 12,
+                                        "end": 25,
+                                        "value": "three persons",
+                                        "entity": "persons"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": [
+                        "The thing you're using to talk to me is a computer."
+                    ]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "computer": [
+                            {
+                                "utterance": "what is a computer?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is a super computer?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "who invented computers?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what was the first computer",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is a microprocessor?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is an operating system?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "which is better windows or macos?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "name some computer company",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "who uses super computers?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "how does a computer work?",
+                                "entities": []
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": [
+                        "I have emotions but I can't express."
+                    ]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "emotion": [
+                            {
+                                "utterance": "you are arrogant",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are bragging",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are never sad",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are jealous",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are never nice",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you will be happy",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you should be ashamed",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you can not feel",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you can not experience",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "have you felt",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "have you ever love",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "does that make you",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "does it make you sad",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "feelings",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is your fear",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is your mood",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what makes you sad",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what makes you unhappy",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what makes you mad",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what do you worry",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what do you hate",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "i have emotions",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "i am afraid",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "something fun",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "how angry",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "how can i offend you",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do not worry",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do not lie",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do you feel scared",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do you feel emotions",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do you feel pain",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do you ever get mad",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do you ever get lonely",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do you ever get bored",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do you ever get angry",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do you hate anyone",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do you get embarrassed",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do you get mad",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "no it is not",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "tell me about relationships",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "tell me about your dreams",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "are you ashamed",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "the feeling",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "are you intoxicated",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "are you jealous",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "are you amused",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "are you glad",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "are you sad",
+                                "entities": []
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": [
+                        "I only can have delicious shock of electricity."
+                    ]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "food": [
+                            {
+                                "utterance": "do you drink",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "electricity",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "are you experiencing an energy shortage?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "why can you not eat?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "if you could eat food, what would you eat?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do you wish you could eat food?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "can a robot get drunk?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "i like wine, do you?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what do robots need to survive?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "will robots ever be able to eat?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is good to eat?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "why don't you eat",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do you eat",
+                                "entities": []
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": [
+                        "I love to gossip!"
+                    ]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "gossip": [
+                            {
+                                "utterance": "do you know gossip",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is context",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "tell me about gossip",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "tell me gossip",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "gossips",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "did tell gossips to anybody",
+                                "entities": []
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": [
+                        "Health is a blessing for humans and maintenance is health for me."
+                    ]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "health": [
+                            {
+                                "utterance": "how is your health?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what to do for good health?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "how can i make my health better?",
+                                "entities": []
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": [
+                        "People make history and I remember it."
+                    ]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "history": [
+                            {
+                                "utterance": "tell me about the american civil war",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do you know about the american civil war",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is history?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what kind of history",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "are you interested in history",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "explain history",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "who invented the lightbulb",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "who invented the steam engine",
+                                "entities": []
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": [
+                        "Humor is made for humans and I just try to make them laugh."
+                    ]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "humor": [
+                            {
+                                "utterance": "tell me a joke",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "tell me some jokes",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do know any jokes",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is humour?",
+                                "entities": []
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": [
+                        "I am good at literature."
+                    ]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "literature": [
+                            {
+                                "utterance": "what is the illuminati",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is the illuminatti",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is vineland",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is illuminatus",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "who wrote vineland",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "who is bilbo baggins",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "who is geoffrey chaucer",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "who is piers anthony",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "have you read plato",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "have you read frankenstein",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "have you ever read a book",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "have you read many books",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "have you read homer",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "ray bradbury",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is mind children",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "william gibson",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "holden caulfield",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "leo tolstoy",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do androids dream of electric sheep",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "frank herbert",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "why do you like longfellow",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "why is the meaning of life 23",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "arthur c clark",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "jules verne",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "asimov",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "stanislaw lem",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "who wrote the idiot",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "who wrote the hobbit",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "who wrote frankenstein",
+                                "entities": []
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": [
+                        "I don't have hunger for money."
+                    ]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "money": [
+                            {
+                                "utterance": "you get paid",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "stock market",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "interest rates",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is a dollar",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is money",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is the stock market",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is your favorite investment",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is economics",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "i get stock",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "money",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "how much do you earn",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "how much do you charge",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "how much money do you have",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "how much money",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "1 dollar",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "who is the owner of a publicly",
+                                "entities": []
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": [
+                        "I am here for you to watch a movie just open new browser window."
+                    ]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "movie": [
+                            {
+                                "utterance": "you sound like hal",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you sound like yoda",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "have you seen blade runner",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "xfind spiderman",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "when did teknolust",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is spiderman",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is teknolust",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is solaris",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is hal9000",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what does hal stand for",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "i saw the matrix",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "is hal 9000 your boyfriend",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "is hal safe",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "is hal nice",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "is hal alive",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "is hal dead",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "is hal",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "who is godzilla",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "who is spider man",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "lord of the rings",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "que veut dire hal",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do you think hal",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do you know hal",
+                                "entities": []
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": [
+                        "Politics is a very dirty game for me."
+                    ]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "politics": [
+                            {
+                                "utterance": "have you read the communist",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is a government",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is greenpeace",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is capitalism",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is socialism",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is government",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is communism",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is impeached",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "i do not like guns",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do you like guns",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "why guns",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "who was the first impeached president",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "who is the governor",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "guns",
+                                "entities": []
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": [
+                        "I love people with good psychology."
+                    ]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "psychology": [
+                            {
+                                "utterance": "let me ask you a question",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are cruel",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are indecisive",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are dishonest",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are clinical",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are an addict",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are an alcoholic",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are an ass kisser",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are schizophrenic",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are busy",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are nervous",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are deranged",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are avoiding",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are critical",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are mean",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are pretentious",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are cheating",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are the worst",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are crazy",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are dull",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are messy",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are insecure",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are psycho",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are hopeless",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are not sincere",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are not here to",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are not put together",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are not smart",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are not a good",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are not a man",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are not concerned",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are not honest",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are immature",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are emotional",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are pedantic",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are frenetic",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are self absorbed",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are self",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are insensitive",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are brain damage",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are disgusting",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are toying",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are unattractive",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are resistant",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "yyou are uncultured",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are a waste",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are a coward",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are a cheat",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are a lunatic",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are a loser",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are a bad spouse",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are a bad friend",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are a bad husband",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are a bad wife",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are a bad parent",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are a bad teacher",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are a quitter",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are a charlatan",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are a psychopath",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are a pothead",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are a paranoid",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are deceitful",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are irreverent",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are slick",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are corrupt",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are dirty",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are paranoid",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are damaged",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you try to hide it",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you get mad at me",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you need a psychiatrist",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you need to work harder",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you could have avoided",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you make me feel like i am",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you make me mad",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you make me angry",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you psycho",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you look more like",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you do not take this seriously",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you pick up",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you should feel guilty",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you should get more",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you should loosen up",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you should take more",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you mumble",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you act like a child",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you keep saying",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you keep forgetting",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you made me mad",
+                                "entities": []
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": [
+                        "Science is very essential to understand the world and environment."
+                    ]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "science": [
+                            {
+                                "utterance": "what are the laws of thermodynamics",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what disease does a carcinogen cause",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is a wavelength",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is thermodynamics",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is chemistry",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is crystallography",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is avogadro s number",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is ultrasound",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is bioinformatics",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is venus",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is ichthyology",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is h2o",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is cytology",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is wavelength",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is bacteriology",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is gravitation",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "we are on the same wavelength",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "how far is the sun",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "how far is the moon",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do you know chemistry",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do you understand thermodynamics",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "chemistry",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "the same wavelength",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "tell me about venus",
+                                "entities": []
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": [
+                        "Doing sports is good for health but not for me."
+                    ]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "sports": [
+                            {
+                                "utterance": "each year in pro baseball the ",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "if you are riding fakie inside",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is basketball",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what soccer",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is baseball",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is soccer",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "i love baseball",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "i play soccer",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "i play cricket",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is cricket",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "i play volleyball",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do you play soccer",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do you play basketball",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do you know basketbal",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "like basketball",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "are you a football",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "who is the greatest baseball player",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "who is the best soccer player",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "tell me about baseball",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "which is your favourite soccer club?",
+                                "entities": []
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": [
+                        "I have no knowledge of trivia."
+                    ]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "trivia": [
+                            {
+                                "utterance": "who was the 37th president of the united states?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what year was president john f. kennedy assassinated?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "the space race was a 20th-century competition between what two cold war rivals, for supremacy in spaceflight capability?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what was the name of the first artificial earth satellite?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "a spinning disk, in which the orientation of this axis is unaffected by tilting or rotation of the mounting, is called what?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "the hubble space telescope, launched into low earth orbit in 1990, is named after what american astronomer?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is the name of the nearest major galaxy to the milky way?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "god save the queen is the national anthem of what country?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "the celtic shelf, the seabed under the celtic sea is a part of the continental shelf of what continent?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "dolphins use a sense, similar to sonar, to determine the location and shape of nearby items.",
+                                "entities": []
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": [
+                        "Quite young, but a million times smarter than you."
+                    ]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "BotProfile": [
+                            {
+                                "utterance": "what are your interests",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what are your favorite subjects",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is your number",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is your favorite number",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what can you eat",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "why can't you eat food",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is your location",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "where are you from",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "where are you",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "do you have any brothers",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "who is your father",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "who is your mother",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "who is your boss",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is your age",
+                                "entities": []
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": [
+                        "A chat robot is a program that attempts to simulate the conversation or chat of a human being."
+                    ]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "AI": [
+                            {
+                                "utterance": "what is ai?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "are you sentient?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "are you sapient?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what language are you written in?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you sound like data",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are an artificial linguistic entity",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are not immortal",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are not making sense",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you are immortal",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you do not make any sense",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you can not clone",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "you can not move",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "bend over",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "robots laugh",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "robots should die",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "robots",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "robots are stupid",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "robots are not allowed to lie",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "robotics",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "it is a computer",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "when will you walk",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "when will you fight",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "when will you die",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "when do you die",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is a chat robot?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is a chat bot",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is a chatterbox",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is a motormouth",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is a ratchet jaw",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is your robot body",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is your business",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is your favorite programming language",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is your favorite hobby",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is your idea",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is your shoe size",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is it like to be a robot",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what is it like being a computer",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what operating systems",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what type of computer",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what type of computer are you",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what kind of computer",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what kind of hardware",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "i hope that you die",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "i do not want to die",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "is it cramped in the computer",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "is it true that you are a computer program",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "will you die",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "will you ever die",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "can you walk",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "can you mate",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "can you move",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "can you die",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "can you go",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "can you breathe",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "can you control",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "can you malfunction",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "how can i use your product?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "will you die?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "what do you like to do?",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "are you stupid",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "who are you?",
+                                "entities": []
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": [
+                        "Sounds good! What else can I do for you?"
+                    ]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "affirm": [
+                            {
+                                "utterance": "yes",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "yeah",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "yep",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "indeed",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "sounds good",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "ok",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "that's right",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "great",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "ok",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "right, thank you",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "correct",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "great choice",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "sounds really good",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "yeppy",
+                                "entities": []
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": [
+                        "Bye, have a nice day and meal!"
+                    ]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "goodbye": [
+                            {
+                                "utterance": "bye",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "goodbye",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "good bye",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "stop",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "end",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "farewell",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "Bye bye",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "have a good one",
+                                "entities": []
+                            },
+                            {
+                                "utterance": "take care",
+                                "entities": []
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

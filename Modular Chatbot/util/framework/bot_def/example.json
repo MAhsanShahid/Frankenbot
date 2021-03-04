@@ -1,0 +1,42 @@
+{
+    "modules": [
+        {
+            "name": "smalltalk",
+            "intents": [
+                // intents are defined per module.
+                // the intent recognition trains one model per module
+                {
+                    "name": "#greeting",
+                    "utterances": ["hi", "hello", "good morning"]
+                },
+                {
+                    "name": "#restaurant-search",
+                    "utterances": ["i am looking for a chinese restaurant"]
+                }
+            ],
+            "entities": {
+                // entities are also defined per module 
+                // we simplify entity recognition to keyword based recognition.
+                // if you have already implemented the machine learning based entity recognition then please use this.
+                // machine learning based is better. i just hoped i could simplify it for you
+                "@cuisine": ["chinese", "italien", "german"] 
+            },
+            "dialog_tree": [
+                {
+                    // this is a tree node.
+                    "intent_condition": "#greeting",   //intent condition references the intent
+                    "text_answers": [
+                        "hello", "nice to meet you"
+                    ]
+                },
+                {
+                    // this example references an intent and an entity
+                    "intent_condition": "#restaurant-search",
+                    "text_answers": [
+                        "in which area should i look for a @cuisine restaurant?"
+                    ]
+                }
+            ]
+        }
+    ]
+}

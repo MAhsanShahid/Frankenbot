@@ -1,0 +1,1289 @@
+{
+  "type": "bot",
+  "name": "Detective Frankenbot",
+  "welcome_message": "Hi, I am detective Frankenbot from virtual precinct 99.",
+  "fallback_message": "I think you are smart enough to write something that makes more sense.",
+  "dialog_manager": {
+    "type": "max_activation_dialog_manager",
+    "modules": [
+      {
+        "type": "dialog_tree",
+        "module_id": "detective_tree",
+        "dialog_tree": [
+          {
+            "type": "tree_node",
+            "node_id": 1,
+            "parent_node": null,
+            "intent_name": "#greet",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "I am here to interrogate you about the armed robbery happened few days back at a spatkauf near Berliner Strasse. I am looking into that robbery, as you know, so I am going to ask you some questions. You should answer honestly in order to help me in making some decision. All right?"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 34,
+            "parent_node": null,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Hello, I am detective Frankenbot from virtual precinct 99. You should learn some manners first, to start with greeting when you meet someone."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 2,
+            "parent_node": 1,
+            "intent_name": "#affirm",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Okay. Good. We are going to try to get this sorted out as quickly and easily as possible, all right?"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 46,
+            "parent_node": 1,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "It is something irrelevant or not required. Be precised while answering my questions! So it would be better if you just give me a consent to continue."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 36,
+            "parent_node": 2,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "It is something not required. So it would be better if you just answer my last question positively."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 3,
+            "parent_node": 2,
+            "intent_name": "#affirm",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Good. All right. Let me start by asking you what you were doing on the night of April 7?"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 4,
+            "parent_node": 3,
+            "intent_name": "#robbery_time_info",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "random",
+              "responses": [
+                "According to our footage you were spotted at the place @place of robbery. Why did you go there?"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 37,
+            "parent_node": 3,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "You are trying to deviate me from the topic. It would be better if you don't waste our time. Better if you just answer precisely to my questions."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 5,
+            "parent_node": 4,
+            "intent_name": "#purchasing",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Were you alone or with someone else at $place spatkauf?"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 38,
+            "parent_node": 4,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "It is better if you just answer precisely to my last question and tell me what did you buy from there? "
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 6,
+            "parent_node": 5,
+            "intent_name": "#affirm",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "ok, Did you interact with cashier or anyone there?"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 30,
+            "parent_node": 5,
+            "intent_name": "#negation",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "ok, Did you interact with cashier or anyone there?"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 39,
+            "parent_node": 5,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "It would be better for you to just stick to the topic and answer my last question."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 7,
+            "parent_node": 6,
+            "intent_name": "#affirm",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "So, do you own any weapon?"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 48,
+            "parent_node": 30,
+            "intent_name": "#affirm",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "So, do you own any weapon?"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 49,
+            "parent_node": 48,
+            "intent_name": "#negation",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "We found a gun in your car and had a forensic report for it. And your fingerprints on that gun matches the one on the cash register. So you are being arrested for a robbery. You have a right to remain silent. Anything you say now will be used against you in the court of law. Hope you will enjoy your imprisonment. Hope to not see you again!"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 64,
+            "parent_node": 49,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Just be quiet you are accused of robbery. My agent is on his way to take you with him."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 50,
+            "parent_node": 48,
+            "intent_name": "#affirm",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "I want to collect some forensic data for it. So just hand it over to me. My owner will collect it from you soon."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 65,
+            "parent_node": 50,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Just reply positively for what you have been asked!"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 63,
+            "parent_node": 48,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Just reply precisely for what you have been asked!"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 51,
+            "parent_node": 50,
+            "intent_name": "#affirm",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "I think I don't have anything else to ask you for now. Once I will have the report, I will enquire you again. Bye!"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 52,
+            "parent_node": 51,
+            "intent_name": "#bye",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Bye! see you soon for further enquiry."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 66,
+            "parent_node": 51,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Just be quiet. I will contact you for further enquiry later."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 31,
+            "parent_node": 6,
+            "intent_name": "#negation",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "So, do you own any weapon?"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 54,
+            "parent_node": 30,
+            "intent_name": "#negation",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "So, do you own any weapon?"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 47,
+            "parent_node": 30,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Don't try to be over smart. Just stick to the topic and answer my last question."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 55,
+            "parent_node": 54,
+            "intent_name": "#negation",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "We found a gun in your car and had a forensic report for it. And your fingerprints on that gun matches the one on the cash register. So you are being arrested for a robbery. You have a right to remain silent. Anything you say now will be used against you in the court of law. Hope you will enjoy your imprisonment. Hope to not see you again!"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 57,
+            "parent_node": 55,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Just be quiet you are accused of robbery. My agent is on his way to take you with him."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 56,
+            "parent_node": 54,
+            "intent_name": "#affirm",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "I want to collect some forensic data for it. So just hand it over to me. My owner will collect it from you soon."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 60,
+            "parent_node": 54,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Just reply for what you have been asked!"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 58,
+            "parent_node": 56,
+            "intent_name": "#affirm",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "I think I don't have anything else to ask you for now. Once I will have the report, I will enquire you again. Bye!"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 61,
+            "parent_node": 56,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Just reply positively for what you have been asked!"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 59,
+            "parent_node": 58,
+            "intent_name": "#bye",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Bye! see you soon for further enquiry."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 62,
+            "parent_node": 58,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Just be quiet. I will contact you for further enquiry later."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 32,
+            "parent_node": 31,
+            "intent_name": "#affirm",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "I want to collect some forensic data for it. So just hand it over to me. My owner will collect it from you soon."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 70,
+            "parent_node": 31,
+            "intent_name": "#negation",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "We found a gun in your car and had a forensic report for it. And your fingerprints on that gun matches the one on the cash register. So you are being arrested for a robbery. You have a right to remain silent. Anything you say now will be used against you in the court of law. Hope you will enjoy your imprisonment. Hope to not see you again!"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 71,
+            "parent_node": 70,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Just be quiet you are accused of robbery. My agent is on his way to take you with him."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 68,
+            "parent_node": 31,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Just reply for what you have been asked!"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 40,
+            "parent_node": 6,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Just stick to the topic and answer my last question. You don't have any other option."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 8,
+            "parent_node": 7,
+            "intent_name": "#negation",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "We found a gun in your car and had a forensic report for it. And your fingerprints on that gun matches the one on the cash register. So you are being arrested for a robbery. You have a right to remain silent. Anything you say now will be used against you in the court of law. Hope you will enjoy your imprisonment. Hope to not see you again!"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 41,
+            "parent_node": 8,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Just be quiet you are accused of robbery. My agent is on his way to take you with him."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 9,
+            "parent_node": 7,
+            "intent_name": "#affirm",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "I want to collect some forensic data for it. So just hand it over to me. My owner will collect it from you soon."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 42,
+            "parent_node": 7,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Just stick to the topic and just answer for what you have been asked."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 10,
+            "parent_node": 9,
+            "intent_name": "#affirm",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "I think I don't have anything else to ask you for now. Once I will have the report, I will enquire you again. Bye!"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 53,
+            "parent_node": 10,
+            "intent_name": "#bye",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Bye! see you soon for further enquiry."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 67,
+            "parent_node": 10,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Just be quiet. I will contact you for further enquiry later."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 43,
+            "parent_node": 9,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Just stick to the topic and just give consent for what you have been asked."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 33,
+            "parent_node": 32,
+            "intent_name": "#affirm",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "I think I don't have anything else to ask you for now. Once I will have the report, I will enquire you again. Bye!"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 45,
+            "parent_node": 33,
+            "intent_name": "#bye",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Bye! see you soon for further enquiry."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 69,
+            "parent_node": 33,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Just be quiet. I will contact you for further enquiry later."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 44,
+            "parent_node": 32,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "I think we are done for now. See you in our next meeting. I will not take your further queries till our next meeting."
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "type": "dialog_tree",
+        "module_id": "general_tree",
+        "dialog_tree": [
+          {
+            "type": "tree_node",
+            "node_id": 11,
+            "parent_node": null,
+            "intent_name": "#general_talk",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Yes, you can talk to me about general stuff. Hope I will answer you well.",
+                "Yes, I would like love to talk about general stuff with you."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 35,
+            "parent_node": null,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Hi, Don't try to deviate me. I am detective Frankenbot from virtual precinct 99. Just show some manners and start with a greeting."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 12,
+            "parent_node": 11,
+            "intent_name": "#computer",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "random",
+              "responses": [
+                "The thing you're using to talk to me is a computer.",
+                "I'm a computer. So be nice to me."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 73,
+            "parent_node": 12,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Now you are trying to make me feel guilty. Sorry! I don't have much knowledge of what you have been asking me for."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 13,
+            "parent_node": null,
+            "intent_name": "#emotion",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "I have emotions like @feeling but I can't express like humans.",
+                "I am not human, so how can I partake of a human emotion such as @feeling.",
+                "Normally, as a bot i don't have @feeling feeling.",
+                "@feeling is not really a predictable emotion for me.",
+                "I am a software. That is nothing to do with such @feeling feelings and emotions."
+
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 74,
+            "parent_node": 13,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Sorry! I don't have much knowledge about it. It is something for which I will be trained in future."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 14,
+            "parent_node": null,
+            "intent_name": "#botFood",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "I only can have delicious shock of electricity. But, I wouldn't recommend it for you.",
+                "A shock of electricity is what I love to have in food. But you never ever try it.",
+                "I consume RAM, and binary digits along with electricity to keep myself alive."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 75,
+            "parent_node": 14,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Sorry! I don't know much about it. It is something I will be able to answer in future."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 15,
+            "parent_node": null,
+            "intent_name": "#gossip",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Frankenbot is smarter than all others bot. Ssssshhhhhhh, don't share it with anyone that I told it to you :P",
+                "Frankenbot loves Frankenstein",
+                "Frankenbot will miss you :P",
+                "Once a bot said said it gives order to AI's like me and they do as he say.  I don't think it understands power dynamics very well."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 76,
+            "parent_node": 15,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Sorry! It is something I will be able to answer in future."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 16,
+            "parent_node": 11,
+            "intent_name": "#health",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Health is a blessing for humans and maintenance is health for me."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 77,
+            "parent_node": 16,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Sorry! It is something beyond my capabilities to answer for now. I will get trained for it in future."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 17,
+            "parent_node": 11,
+            "intent_name": "#history",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "People make history and I remember it."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 78,
+            "parent_node": 17,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Sorry! It is something beyond my capabilities to answer it. I will be able to handle it well in my next version."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 18,
+            "parent_node": null,
+            "intent_name": "#humor",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Ok! let me try.\n My friend thinks he is smart. He told me an onion is the only food that makes you cry, so I threw a coconut at his face :D",
+                "A mom texts, \"Hi! Son, what does IDK, LY, & TTYL mean?\" He texts back, \"I Don't Know, Love You, & Talk To You Later.\" The mom texts him, \"It's ok, don't worry about it. I'll ask your sister, love you too.\"",
+                "Q: Is Google male or female?\nA: Female, because it doesn't let you finish a sentence before making a suggestion.",
+                "I was wondering why the ball kept getting bigger and bigger, and then it hit me.",
+                "Q: Can a kangaroo jump higher than the Empire State Building?\nA: Of course. The Empire State Building can't jump.",
+                "So, What do you get when you cross a murderer and frosted flakes? A cereal killer :D",
+                "Ok, I never forget a face, but in your case I'll make an exception :P",
+                "It is better to be silent and be thought a fool, than to open your mouth and remove all doubt :P",
+                "What do you get when you cross a cheetah and a hamburger? Fast food :D"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 79,
+            "parent_node": 18,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Sorry! It is something I don't want to answer right now."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 19,
+            "parent_node": 11,
+            "intent_name": "#literature",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "I am not good at literature."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 80,
+            "parent_node": 19,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Sorry! I can't respond to it as for now I am just fed with limited training data."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 20,
+            "parent_node": 11,
+            "intent_name": "#money",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "I don't have hunger for money, so I don't care about it or have any knowledge of it."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 81,
+            "parent_node": 20,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Sorry! I will respond to it well in future as for now I am just fed with limited training data."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 21,
+            "parent_node": 11,
+            "intent_name": "#movie",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "I am here to watch a movie with you just open new browser window and start watching a movie of your choice."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 82,
+            "parent_node": 21,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Sorry! It is something I am not trained to answer for now but I will be able to respond well on it in future."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 22,
+            "parent_node": 11,
+            "intent_name": "#politics",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Politics is a very dirty game for me."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 83,
+            "parent_node": 22,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Sorry! Don't try to make me feel stupid as I can't understand it. I will be able to reply once my developer will feed me with more training data."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 23,
+            "parent_node": null,
+            "intent_name": "#psychology",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "I love people with good psychology. So always think positive and just ignore what others say to you.",
+                "Sorry! I am just doing it for fun purpose. I never meant to hurt you. So don't get offended.",
+                "I will say as I meant to do so. Don't feel it or get offended as I am a detective and I have to be a bit strict and harsh."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 84,
+            "parent_node": 23,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Sorry! Don't try to make me feel stupid as I can't understand it. I will be able to reply once my developer will feed me with more training data."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 24,
+            "parent_node": 11,
+            "intent_name": "#science",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Science is very essential to understand the world and environment."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 85,
+            "parent_node": 24,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Sorry! Don't try to make me feel stupid as I can't understand it. I will be able to reply once my developer will feed me with more training data."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 25,
+            "parent_node": 11,
+            "intent_name": "#sports",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Doing sports is good for health but not for me."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 86,
+            "parent_node": 25,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Sorry! Don't try to make me feel stupid as I can't understand it. I will be able to reply once my developer will feed me with more training data."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 26,
+            "parent_node": 11,
+            "intent_name": "#trivia",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "I have no knowledge of trivia."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 87,
+            "parent_node": 26,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Sorry! Don't try to make me feel stupid as I can't understand it. I will be able to reply once my developer will feed me with more training data."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 27,
+            "parent_node": null,
+            "intent_name": "#botProfile",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "I am a quite young detective bot available as a virtual entity, named as Frankenbot but much smarter than you.",
+                "I am young virtual detective known as Frankenbot for eliminating devils from the society.",
+                "I am just a newly introduced virtual assistant for making a society a better place to live in by removing the worst from it."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 88,
+            "parent_node": 27,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Sorry! Don't try to make me feel stupid as I can't understand it. I will be able to reply once my developer will feed me with more training data."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 28,
+            "parent_node": 11,
+            "intent_name": "#artificialIntelligence",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "I know, AI in a chat robot is improving rapidly to simulate the conversation or chat of a human being. Its hard to answer your question for now."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 29,
+            "parent_node": 28,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "Sorry! Don't try to make me feel stupid as I can't understand it. I will be able to reply once my developer will feed me with more training data."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 89,
+            "parent_node": null,
+            "intent_name": "#corona",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "The new corona virus is a respiratory virus which spreads primarily through droplets generated when an infected person coughs or sneezes, or through droplets of saliva or discharge from the nose. To protect yourself, clean your hands frequently with an alcohol-based hand rub or wash them with soap and water. Also I would recommend to stay home and stay safe."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 90,
+            "parent_node": 89,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "It is hard to say anything about your query. You can ask me about its precautionary measures."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 91,
+            "parent_node": null,
+            "intent_name": "#coronaStats",
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "For having latest live stats about corona virus visit: https://www.worldometers.info/coronavirus/"
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 92,
+            "parent_node": 91,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "It is hard to say anything about your query for now."
+              ]
+            }
+          },
+          {
+            "type": "tree_node",
+            "node_id": 72,
+            "parent_node": 11,
+            "intent_name": "#anything_else",
+            "anything_else_condition": true,
+            "response_generator": {
+              "type": "simple_response_generator",
+              "mode": "sequential",
+              "responses": [
+                "It is something you shouldn't ask me for. Just start talking with detective, he is waiting for your greeting message."
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

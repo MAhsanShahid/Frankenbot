@@ -1,0 +1,2 @@
+Open command prompt with path to this directory(D:\TUB Masters\Theses\modular-chatbot\frankenbot-framework>)
+and run command (python app.py detective).

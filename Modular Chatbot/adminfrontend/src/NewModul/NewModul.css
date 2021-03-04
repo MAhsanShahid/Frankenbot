@@ -1,0 +1,27 @@
+.SettingsInput{
+    width: 100%;
+}
+.NewModulReposition{
+    position: relative;
+    left:25%;
+}
+.goABitLeft{
+    position: relative;
+    left:-2%;
+    display:inline-block;
+
+}
+.floatRight{    
+    float: right;
+    width:30px;
+    height:30px;
+    cursor: pointer;
+}
+.block{
+    width: 90%;
+    position: relative;
+    left:-2%;
+
+    display:inline-block;
+
+}

@@ -1,0 +1,604 @@
+{
+  "rasa_nlu_data": {
+    "entity_synonyms": [
+      {
+        "value": "berliner strasse",
+        "synonyms": [
+          "berliner Strasse",
+          "berlner strase"
+        ]
+      }
+    ],
+    "common_examples": [
+      {
+        "text": "hi",
+        "intent": "#greet",
+        "entities": []
+      },
+      {
+        "text": "Hi",
+        "intent": "#greet",
+        "entities": []
+      },
+      {
+        "text": "hey",
+        "intent": "#greet",
+        "entities": []
+      },
+      {
+        "text": "Hey",
+        "intent": "#greet",
+        "entities": []
+      },
+      {
+        "text": "hey there",
+        "intent": "#greet",
+        "entities": []
+      },
+      {
+        "text": "Hello",
+        "intent": "#greet",
+        "entities": []
+      },
+      {
+        "text": "hello",
+        "intent": "#greet",
+        "entities": []
+      },
+      {
+        "text": "good morning",
+        "intent": "#greet",
+        "entities": []
+      },
+      {
+        "text": "good evening",
+        "intent": "#greet",
+        "entities": []
+      },
+      {
+        "text": "dear sir",
+        "intent": "#greet",
+        "entities": []
+      },
+      {
+        "text": "hello sir",
+        "intent": "#greet",
+        "entities": []
+      },
+      {
+        "text": "hello detective",
+        "intent": "#greet",
+        "entities": []
+      },
+      {
+        "text": "hi officer",
+        "intent": "#greet",
+        "entities": []
+      },
+      {
+        "text": "hi how can I help you?",
+        "intent": "#greet",
+        "entities": []
+      },
+      {
+        "text": "hi what do you want?",
+        "intent": "#greet",
+        "entities": []
+      },
+      {
+        "text": "yes",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "yep",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "yeah",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "ok",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "okay",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "yes sure",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "sounds good",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "sure",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "all right",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "alright",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "that is fine",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "that's fine",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "fine",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "i was alone",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "I was alone",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "I was with my friend",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "yes i was alone",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "i was with my friend",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "i was with friend",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "I was with friend",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "with friend",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "I was with",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "I was at",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "was at place",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "yes i was alone",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "I don’t remember",
+        "intent": "#robbery_time_info",
+        "entities": []
+      },
+      {
+        "text": "I do not remember",
+        "intent": "#robbery_time_info",
+        "entities": []
+      },
+      {
+        "text": "I do not know",
+        "intent": "#robbery_time_info",
+        "entities": []
+      },
+      {
+        "text": "I don't know",
+        "intent": "#robbery_time_info",
+        "entities": []
+      },
+      {
+        "text": "I was at home",
+        "intent": "#robbery_time_info",
+        "entities": []
+      },
+      {
+        "text": "at home",
+        "intent": "#robbery_time_info",
+        "entities": []
+      },
+      {
+        "text": "i was sleeping",
+        "intent": "#robbery_time_info",
+        "entities": []
+      },
+      {
+        "text": "sleeping",
+        "intent": "#robbery_time_info",
+        "entities": []
+      },
+      {
+        "text": "at bed",
+        "intent": "#robbery_time_info",
+        "entities": []
+      },
+      {
+        "text": "i was at bed",
+        "intent": "#robbery_time_info",
+        "entities": []
+      },
+      {
+        "text": "I was with friends",
+        "intent": "#robbery_time_info",
+        "entities": []
+      },
+      {
+        "text": "I was outside",
+        "intent": "#robbery_time_info",
+        "entities": []
+      },
+      {
+        "text": "somewhere outside",
+        "intent": "#robbery_time_info",
+        "entities": []
+      },
+      {
+        "text": "somewhere",
+        "intent": "#robbery_time_info",
+        "entities": []
+      },
+      {
+        "text": "outside",
+        "intent": "#robbery_time_info",
+        "entities": []
+      },
+      {
+        "text": "do not remember",
+        "intent": "#robbery_time_info",
+        "entities": []
+      },
+      {
+        "text": "I was near Berliner Strasse",
+        "intent": "#robbery_time_info",
+        "entities": [
+          {
+            "start": 11,
+            "end": 27,
+            "value": "Berliner Strasse",
+            "entity": "@place"
+          }
+        ]
+      },
+      {
+        "text": "I was near that shop",
+        "intent": "#robbery_time_info",
+        "entities": []
+      },
+      {
+        "text": "I was at spatkauf at berliner strasse",
+        "intent": "#robbery_time_info",
+        "entities": [
+          {
+            "start": 21,
+            "end": 37,
+            "value": "berliner strasse",
+            "entity": "@place"
+          }
+        ]
+      },
+       {
+        "text": "I was at",
+        "intent": "#robbery_time_info",
+        "entities": []
+      },
+      {
+        "text": "I was near that spatkauf",
+        "intent": "#robbery_time_info",
+        "entities": []
+      },
+      {
+        "text": "Oh yeah I just remember that I went there to buy cigarettes drinks tobacco",
+        "intent": "#purchasing",
+        "entities": []
+      },
+      {
+        "text": "I went there to buy cigarettes drinks tobacco",
+        "intent": "#purchasing",
+        "entities": []
+      },
+      {
+        "text": "Oh now i remember that i went there to buy cigarettes drinks tobacco",
+        "intent": "#purchasing",
+        "entities": []
+      },
+      {
+        "text": "Oh yes I just remember that I went there to buy cigarettes",
+        "intent": "#purchasing",
+        "entities": []
+      },
+      {
+        "text": "yeah I went there to buy cigarettes drinks tobacco",
+        "intent": "#purchasing",
+        "entities": []
+      },
+      {
+        "text": "yes I just remember that I went there to buy drink",
+        "intent": "#purchasing",
+        "entities": []
+      },
+      {
+        "text": "I forgot to mention that I went there to buy tobacco",
+        "intent": "#purchasing",
+        "entities": []
+      },
+      {
+        "text": "now i remember that i went there to buy tobacco",
+        "intent": "#purchasing",
+        "entities": []
+      },
+      {
+        "text": "i went there to buy tobacco",
+        "intent": "#purchasing",
+        "entities": []
+      },
+      {
+        "text": "Oh now i remember that i went there to buy cigarettes",
+        "intent": "#purchasing",
+        "entities": []
+      },
+      {
+        "text": "yes now i remember that i went there to buy drinks tobacco",
+        "intent": "#purchasing",
+        "entities": []
+      },
+      {
+        "text": "yeah now i remember that i went there to buy tobacco",
+        "intent": "#purchasing",
+        "entities": []
+      },
+      {
+        "text": "tobacco",
+        "intent": "#purchasing",
+        "entities": []
+      },
+      {
+        "text": "drinks",
+        "intent": "#purchasing",
+        "entities": []
+      },
+      {
+        "text": "drink",
+        "intent": "#purchasing",
+        "entities": []
+      },
+      {
+        "text": "cigarettes",
+        "intent": "#purchasing",
+        "entities": []
+      },
+      {
+        "text": "to buy",
+        "intent": "#purchasing",
+        "entities": []
+      },
+      {
+        "text": "for buying",
+        "intent": "#purchasing",
+        "entities": []
+      },
+      {
+        "text": "buying",
+        "intent": "#purchasing",
+        "entities": []
+      },
+      {
+        "text": "to purchase",
+        "intent": "#purchasing",
+        "entities": []
+      },
+      {
+        "text": "for purchasing",
+        "intent": "#purchasing",
+        "entities": []
+      },
+      {
+        "text": "yes with cashier",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "Yes I talked to the cashier",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "Yes I did",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "yes i did",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "yes I had interaction with cashier",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "yes with cashier",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "yes to cashier",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "yes with cashier",
+        "intent": "#affirm",
+        "entities": []
+      },
+      {
+        "text": "no",
+        "intent": "#negation",
+        "entities": []
+      },
+      {
+        "text": "No",
+        "intent": "#negation",
+        "entities": []
+      },
+      {
+        "text": "Nope",
+        "intent": "#negation",
+        "entities": []
+      },
+      {
+        "text": "nope",
+        "intent": "#negation",
+        "entities": []
+      },
+      {
+        "text": "no one",
+        "intent": "#negation",
+        "entities": []
+      },
+      {
+        "text": "No I was with my friend",
+        "intent": "#negation",
+        "entities": []
+      },
+      {
+        "text": "no i was with my friend",
+        "intent": "#negation",
+        "entities": []
+      },
+      {
+        "text": "no i was with my family",
+        "intent": "#negation",
+        "entities": []
+      },
+      {
+        "text": "no i don't want to",
+        "intent": "#negation",
+        "entities": []
+      },
+      {
+        "text": "no i do not want to",
+        "intent": "#negation",
+        "entities": []
+      },
+      {
+        "text": "i do not want to",
+        "intent": "#negation",
+        "entities": []
+      },
+      {
+        "text": "no i would not",
+        "intent": "#negation",
+        "entities": []
+      },
+      {
+        "text": "i would not",
+        "intent": "#negation",
+        "entities": []
+      },
+      {
+        "text": "no i will not",
+        "intent": "#negation",
+        "entities": []
+      },
+      {
+        "text": "no i did not",
+        "intent": "#negation",
+        "entities": []
+      },
+      {
+        "text": "no i didn't",
+        "intent": "#negation",
+        "entities": []
+      },
+      {
+        "text": "i will not",
+        "intent": "#negation",
+        "entities": []
+      },
+      {
+        "text": "bye",
+        "intent": "#bye",
+        "entities": []
+      },
+      {
+        "text": "goodbye",
+        "intent": "#bye",
+        "entities": []
+      },
+      {
+        "text": "good bye",
+        "intent": "#bye",
+        "entities": []
+      },
+      {
+        "text": "stop",
+        "intent": "#bye",
+        "entities": []
+      },
+      {
+        "text": "end",
+        "intent": "#bye",
+        "entities": []
+      },
+      {
+        "text": "farewell",
+        "intent": "#bye",
+        "entities": []
+      },
+      {
+        "text": "Bye bye",
+        "intent": "#bye",
+        "entities": []
+      },
+      {
+        "text": "have a good one",
+        "intent": "#bye",
+        "entities": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+    "rasa_nlu_data": {
+        "common_examples": [
+            {
+                "text": "hi",
+                "intent": "#hello",
+                "entities": []
+            },
+            {
+                "text": "hey",
+                "intent": "#hello",
+                "entities": []
+            },
+            {
+                "text": "howdy",
+                "intent": "#hello",
+                "entities": []
+            },
+            {
+                "text": "hey there",
+                "intent": "#hello",
+                "entities": []
+            },
+            {
+                "text": "bye",
+                "intent": "#bye",
+                "entities": []
+            },
+            {
+                "text": "goodbye",
+                "intent": "#bye",
+                "entities": []
+            },
+            {
+                "text": "bye",
+                "intent": "#bye",
+                "entities": []
+            },
+            {
+                "text": "goodbye",
+                "intent": "#bye",
+                "entities": []
+            },
+            {
+                "text": "adios",
+                "intent": "#bye",
+                "entities": []
+            },
+            {
+                "text": "cheers",
+                "intent": "#bye",
+                "entities": []
+            }
+        ]
+    }
+}

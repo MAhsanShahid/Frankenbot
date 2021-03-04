@@ -1,0 +1,39 @@
+{
+    "type": "bot",
+    "name": "Werner",
+    "welcome_message": "Hi I am Werner.",
+    "fallback_message": "I did not understand you.",
+    "dialog_manager": {
+        "type": "max_activation_dialog_manager",
+        "modules": [
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": ["Hi"]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "#greeting": ["hello", "hi", "good morning"]
+                    }
+                }
+            },
+            {
+                "type": "atom",
+                "response_generator": {
+                    "type": "simple_response_generator",
+                    "mode": "sequential",
+                    "responses": ["Bye"]
+                },
+                "nlu": {
+                    "type": "keyword_based_intent_detector",
+                    "intents": {
+                        "#bye": ["bye", "goodbye"]
+                    }
+                }
+            }
+        ]
+    }
+}

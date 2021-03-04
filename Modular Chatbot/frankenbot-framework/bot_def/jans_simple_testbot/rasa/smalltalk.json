@@ -1,0 +1,145 @@
+{
+    "rasa_nlu_data": {
+        "common_examples": [
+            {
+                "text": "tell me about you",
+                "intent": "#aboutyou",
+                "entities": []
+            },
+            {
+                "text": "who are you",
+                "intent": "#aboutyou",
+                "entities": []
+            },
+            {
+                "text": "say something about you",
+                "intent": "#aboutyou",
+                "entities": []
+            },
+            {
+                "text": "please say something about you",
+                "intent": "#aboutyou",
+                "entities": []
+            },
+            {
+                "text": "where are you from?",
+                "intent": "#wherefrom",
+                "entities": []
+            },
+            {
+                "text": "where did you grow up?",
+                "intent": "#wherefrom",
+                "entities": []
+            },
+            {
+                "text": "where do you come from?",
+                "intent": "#wherefrom",
+                "entities": []
+            },
+            {
+                "text": "you come from where?",
+                "intent": "#wherefrom",
+                "entities": []
+            },
+            {
+                "text": "i want ice cream",
+                "intent": "#iwant",
+                "entities": [    
+                    {
+                    "start": 7,
+                    "end": 16,
+                    "value": "ice cream",
+                    "entity": "@food"
+                  }
+                ]
+            },
+            {
+                "text": "i want chocolate",
+                "intent": "#iwant",
+                "entities": [    
+                  {
+                    "start": 7,
+                    "end": 16,
+                    "value": "chocolate",
+                    "entity": "@food"
+                  }
+                ]
+            },
+            {
+                "text": "i want cake",
+                "intent": "#iwant",
+                "entities": [    
+                    {
+                    "start": 7,
+                    "end": 11,
+                    "value": "cake",
+                    "entity": "@food"
+                  }
+              ]
+            },
+            {
+                "text": "i want pudding",
+                "intent": "#iwant",
+                "entities": [    
+                    {
+                    "start": 7,
+                    "end": 14,
+                    "value": "pudding",
+                    "entity": "@food"
+                  }
+              ]
+            },
+            {
+                "text": "give me pudding",
+                "intent": "#iwant",
+                "entities": [    
+                    {
+                    "start": 8,
+                    "end": 15,
+                    "value": "pudding",
+                    "entity": "@food"
+                  }
+              ]
+            },
+            {
+                "text": "id like pudding",
+                "intent": "#iwant",
+                "entities": [    
+                    {
+                    "start": 8,
+                    "end": 15,
+                    "value": "pudding",
+                    "entity": "@food"
+                  }
+              ]
+            },
+            {
+                "text": "i am in the mood for cake",
+                "intent": "#iwant",
+                "entities": [    
+                    {
+                    "start": 22,
+                    "end": 26,
+                    "value": "cake",
+                    "entity": "@food"
+                  }
+              ]
+            },
+            {
+                "text": "what do i want?",
+                "intent": "#whatiwant",
+                "entities": []
+            },
+            {
+                "text": "tell me what i want?",
+                "intent": "#whatiwant",
+                "entities": []
+            },
+            {
+                "text": "do you know what i want?",
+                "intent": "#whatiwant",
+                "entities": []
+            }
+        ]
+    }
+}

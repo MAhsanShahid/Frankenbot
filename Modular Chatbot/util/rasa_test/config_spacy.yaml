@@ -1,0 +1,42 @@
+language: "en_core_web_sm"
+
+pipeline:  #"spacy_sklearn"
+  - name: "SpacyNLP"
+  - name: "WhitespaceTokenizer"
+  - name: "SpacyTokenizer"
+  - name: "SpacyFeaturizer"
+  - name: "SklearnIntentClassifier"
+  - name: "CRFEntityExtractor"
+  - name: "EntitySynonymMapper"
+#  - name: ConveRTTokenizer
+#  - name: ConveRTFeaturizer
+#  - name: RegexFeaturizer
+#  - name: LexicalSyntacticFeaturizer
+#  - name: CountVectorsFeaturizer
+#  - name: CountVectorsFeaturizer
+#    analyzer: "char_wb"
+#    min_ngram: 1
+#    max_ngram: 4
+#  - name: DIETClassifier
+#  - name: EntitySynonymMapper
+#  - name: ResponseSelector
+
+#__________working before____________________
+#  - name: "nlp_spacy"
+#  - name: "tokenizer_spacy"
+#  - name: "intent_featurizer_spacy"
+#  - name: "intent_classifier_sklearn"
+#  - name: "ner_crf"
+#  - name: "ner_synonyms"
+#__________________________________________________
+#pipeline: "tensorflow_embedding" #will try with it
+
+#language: "en_core_web_md"
+#
+#pipeline:
+#- name: "SpacyNLP"
+#- name: "SpacyTokenizer"
+#- name: "SpacyFeaturizer"
+#- name: "CRFEntityExtractor"
+#- name: "SklearnIntentClassifier"
+##- name: "rasa_composite_entities.CompositeEntityExtractor"

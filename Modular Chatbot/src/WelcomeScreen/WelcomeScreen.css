@@ -1,0 +1,25 @@
+.cStyle{
+display: inline-block;
+    position: relative;
+    margin-top: 6%;
+    left: 34%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.modul{
+    border: 1px solid rgb(161, 199, 255);
+    display: inline-block;
+    margin:12px;
+    transition: 1s;
+    border-radius: 10px;
+    height:80px;
+    padding-top: 1.5%;
+    text-align: center;
+    position: relative;
+    
+}
+.modul:hover{
+    background-color: rgb(161, 199, 255);
+    color: #3B69D9;
+    cursor: pointer;
+}

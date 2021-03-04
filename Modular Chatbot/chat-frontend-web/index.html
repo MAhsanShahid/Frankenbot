@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!--    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script type="text/javascript" src="index.js"></script>
+</head>
+
+
+<body class="body">
+<div id="loading"></div>
+<div class="frankenbot-heading">
+    <h2 class="title" id="title">Frankenbot</h2>
+</div>
+<div class="container main-container">
+    <div class="row">
+
+        <div class="col-sm-7 chat-story">
+            <h5>
+                <strong>Information:</strong>
+            </h5>
+            <p class="par">
+                I am the detective chat bot designed to interrogate you about the armed robbery happened few days back
+                at a spatkauf near Berliner Strasse. I am responsible for its investigation, so I am going to ask you
+                some questions to come up with a decision. It will include, what I have investigated so far. Also you
+                can have general conversation with me like you can ask me to talk about general stuff with you, about
+                corona virus and its stats, to make you laugh, to do gossips, how do I feel, who am I, what do I eat
+                and other related questions about me. You can switch between the topics at any moment as I am designed
+                for parallel handling of the multiple topics. Kindly, chat at least with me until I reach any decision
+                or say you goodbye before you jump to completion of the surveys. Thanks!
+            </p>
+            <h6>
+                <strong>Note:</strong> If you ever lost where were you and want to reinstate the detective game then just
+                send me a greeting message (hi, hello etc.) and I will restart it for you.
+            </h6>
+            <h5>
+                <strong>Instructions:</strong>
+            </h5>
+            <p class="par">
+                Just think like you are accused of a robbery and you are sitting in front of a detective and you have to
+                answer his brutal and tricky questions in order to prove your innocence otherwise, you will be
+                declared a culprit. It is a responsibility of a detective to make a decision based on your answers
+                to his questions.
+            </p>
+            <h6>
+                <strong>Note:</strong> It is the fictional detective chat bot designed only for testing and fun purpose.
+                Have fun while staying safe at home :)
+            </h6>
+<!--            <h5>-->
+<!--                <strong>Purpose:</strong>-->
+<!--            </h5>-->
+<!--            <p class="par">-->
+<!--                You can switch between both of the topics at any moment. Whenever, you will respond to the last message-->
+<!--                of previous topic it will continue the conversation from-->
+<!--                that topic's last state instead of starting it again from the beginning, unlike other chat bots. Also,-->
+<!--                if you will respond with some message that is not required at that moment-->
+<!--                then it is smart enough to guide you for what should be an expected response.-->
+<!--            </p>-->
+<!--            <h5>-->
+<!--                <strong>Limitations:</strong>-->
+<!--            </h5>-->
+<!--            <p class="par">-->
+<!--                Kindly keep in mind that the resources used and time invested on its development were restricted. Also,-->
+<!--                the data provided in order to perform training was limited which can lead-->
+<!--                to misinterpretation of your message and can respond falsely. Sorry for this inconvenience, but it will-->
+<!--                be solved in next version of a Frankenbot. Hurray!-->
+<!--            </p>-->
+            <h5>
+                <strong>Frankenbot's Request:</strong>
+            </h5>
+            <p class="par">
+                Once, you are finished having fun with me. Please don't forget to complete following assessments
+                provided as the links below. They will be activated after 1 minute, meanwhile you should get familiar
+                with me by having a small chat with me. I welcome and highly appreciate your prestigious feedback
+                which will help my developer to evaluate me and enhance my abilities for your better experience. Thanks
+                in advance :)
+
+            </p>
+            <ul id = "survey-list">
+                <li><a id="survey1" class="disabled" href="https://forms.gle/WFWUURTcyv1cjBrDA" target="_blank"> Frankenbot's Experience Survey </a>
+                </li>
+                <li><a id="survey2" class="disabled" href="https://esurvey.uid.com/survey/#4907a263-13c2-4db3-bda8-36b9916b82a7" target="_blank">
+                    Frankenbot's Evaluation via AttrakDiff </a></li>
+            </ul>
+            <h6>
+                <strong>Note:</strong> It will not take long and will be done in just few minutes :)
+            </h6>
+
+
+        </div>
+
+        <div class="col-sm-5 frame">
+            <ul id="list"></ul>
+            <div class="chat-text">
+                <div class="msj-rta macro">
+                    <div class="text text-r" style="background:#f6f6ee !important">
+                        <input class="mytext" id="message" placeholder="Type a message"/>
+                    </div>
+                </div>
+                <div style="padding:10px;">
+                    <span class="img-responsive send-icon fa fa-send fa-2x" id="send-message"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 80px;
+    border: 1px solid white;
+  }
+  
+  .App-header {
+    background-color: #678FC9;
+    height: 220px;
+    padding: 20px;
+    color: white;
+  }
+  
+  .App-intro {
+    font-size: large;
+    margin:50px;
+  }
+  .signinTitle{
+      position: relative;
+      top:30px;
+  }
+  
+.signinbutton {
+    width:150px;
+    height:45px;
+    position: relative;
+    top:10px;
+    left:-28px;
+    border-radius: 5px;
+    background-color: #678FC9;
+    color:white;
+    border: 1px solid white;
+    transition: all 0.4s;
+    text-align: center;
+  }
+  .signinbutton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
+    
+  }
+  .signinbutton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: -1px;
+    right: -40px;
+    transition: 0.5s;
+  }
+  .signinbutton:hover{
+    width:151px;
+    height:46px;
+    border: 1px solid #678FC9;
+  }
+  .signinbutton:hover span {
+
+  }
+  .signinbutton:hover span:after {
+    opacity: 1;
+    right: -20px;
+  }

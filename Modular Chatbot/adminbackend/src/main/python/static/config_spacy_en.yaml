@@ -1,0 +1,11 @@
+language: "en_core_web_sm"
+
+pipeline:  #"spacy_sklearn"
+  - name: "SpacyNLP"
+  - name: "WhitespaceTokenizer"
+#    case_sensitive: true
+  - name: "SpacyTokenizer"
+  - name: "SpacyFeaturizer"
+  - name: "SklearnIntentClassifier"
+  - name: "CRFEntityExtractor"
+  - name: "EntitySynonymMapper"
