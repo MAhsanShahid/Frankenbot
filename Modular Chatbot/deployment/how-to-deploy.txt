@@ -1,9 +1,0 @@
-# Deployment of Frankenbot
-
-Currently there is a deploy script only for the admin backend on lnv-3240.sb.dfki.de
-
-1. Login to the VN
-2. Update repository
-cd /local/frankenbot/git-repository
-3. Execute script
-deployment/deploy_adminbackend.sh 
